@@ -1,33 +1,143 @@
-import React from 'react'
+import React, { useState } from 'react'
 import hero_logo from '../assets/gym-hero-img.jpg'
 import Banner from '../components/Banner'
 import { GrUser } from "react-icons/gr";
 import testimonial_logo from "../assets/customer-testimonial.svg"
 import WorkoutSlider from '../components/WorkoutSlider';
+import pricing_icon from '../assets/pricing.svg'
+import community_logo from '../assets/community.svg'
+import TestimonialSection16 from '../components/Community';
+import ComingSoon1 from '../components/ComingSoon';
+import Faqs4 from '../components/Faqs';
+
+plans: [
+  {
+    name: 'Basic',
+    price: '20',
+    list: [
+      { name: 'unlimited gym access' },
+      { name: '1 training programs' },
+      { name: 'free fitness consultation' },
+    ],
+    delay: 600,
+  },
+  {
+    name: 'Premium',
+    price: '35',
+    list: [
+      { name: 'unlimited gym access' },
+      { name: '5 training programs' },
+      { name: 'free fitness consultation' },
+      { name: 'personal trainer' },
+    ],
+    delay: 800,
+  },
+  {
+    name: 'Elite',
+    price: '49',
+    list: [
+      { name: 'unlimited gym access' },
+      { name: 'all training programs' },
+      { name: 'free fitness consultation' },
+      { name: 'personal trainer' },
+      { name: '50% off drinks' },
+    ],
+  }
+]
 
 const Home = () => {
+
   return (
     <div className=''>
       {/* hero section */}
       <Banner />
 
-      {/* testimonial */}
 
-      <section className='bg-slate-100'>
-        <div className='section-title-group max-w-[540px] mx-auto px-4 lg:px-0'>
-          <img src={testimonial_logo} alt="" className='h-[60px]' />
-          <h2 className='h2 section-title'>
-            Training Programs <span className='text-primary-200'>.</span>
-          </h2>
-        </div>
-        <div>
-          <WorkoutSlider  />
-        </div>
-      </section>
+
+
 
       {/* shop coming soon */}
+      {/* <ComingSoon1/> */}
+      <section className="py-40 bg-white/70"> {/* Dark background for the section */}
+        <div className="max-w-screen-xl mx-auto text-center">
+          <div className='section-title-group max-w-[540px] mx-auto px-4 lg:px-0'>
+            <img src={pricing_icon} alt="" />
+            <h2 className='h2'>Shop Coming Soon <span className='text-primary-200'>!</span></h2>
+          </div>
+          {/* <div className='flex flex-col lg:flex-row items-center justify-center max-w-[1280px] mx-auto gap-y-4'>
+            <div className='flex flex-col hover:bg-neutral-500 hover:text-white bg-neutral-400/10 text-neutral-500 hover:scale-105 transition-all duration-300 w-full md:max-w-[620px] lg:max-w-[405px] rounded-sm px-4 lg:min-h-[450px]'>
+
+             
+              <div className='h-32 w-full bg-gray-300 rounded-t-sm mb-4 mt-4 flex items-center justify-center'> 
+                <img src="path/to/your/image.jpg" alt="Hoodies" className='h-full w-auto object-cover rounded-t-sm' /> 
+              </div>
+
+              
+              <div className='flex flex-col justify-between h-full'>
+                <div className='mb-4'>
+                  <div className='lg:text-[50px] sm:text-[35px]  font-bold'>Hoodies</div>
+                  <div className='text-[30px] font-bold'>
+                    <span>£</span>
+                    <span>20</span>
+                  </div>
+                </div>
+                <div className='mt-auto'>
+                  <button className='hover:bg-white bg-black/70 text-white hover:text-neutral-500 hover:border-none border border-neutral-500 btn btn-lg rounded-[1px] lg:mx-auto duration-300 transition-all'>Shop Now!</button>
+                </div>
+              </div>
+
+            </div>
+
+
+            <div className='w-full md:max-w-[620px] lg:max-w-[405px] rounded-sm  px-4 lg:min-h-[450px]'>
+              <div className=' hover:bg-neutral-500 hover:text-white bg-neutral-400/10 text-neutral-500 hover:scale-105 transition-all duration-300'>
+                <div>
+                  Gear
+                </div>
+                <div>
+                  <div>
+                    <span>£</span>
+                    <span>20</span>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='w-full md:max-w-[620px] lg:max-w-[405px] rounded-sm  px-4 lg:min-h-[450px]'>
+              <div className=' hover:bg-neutral-500 hover:text-white bg-neutral-400/10 text-neutral-500 hover:scale-105 transition-all duration-300'>
+                <div>
+                  Straps
+                </div>
+                <div>
+                  <div>
+                    <span>£</span>
+                    <span>20</span>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> */}
+          <div className="flex justify-center">
+            <div className="relative inline-block">
+              <div className="absolute inset-0 bg-green-200 rounded-lg opacity-50 animate__animated animate__pulse animate__infinite"></div>
+              <button className="relative z-10 bg-transparent    px-12 py-5 bg-green-300 text-white shadow-lg transition duration-300 ease-in-out transform hover:bg-green-400 hover:text-white hover:scale-105">
+                Notify Me
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* testimonial */}
+      {/* section-title-group max-w-[240px] px-4 lg:px-0 lg:ml-0 mx-auto */}
+     <TestimonialSection16/>
+
+
+
+
       {/* leanr from a pro section w video */}
       {/* FAQs */}
+      <Faqs4 />
       {/**get started */}
 
 
@@ -52,44 +162,7 @@ const Home = () => {
       </section> */}
 
 
-      {/* shop section */}
-      <section class="py-20 bg-gray-800 text-center">
-        <h2 class="text-5xl font-bold text-white mb-8">Shop Our Merchandise</h2>
-        <p class="text-gray-300 mb-10">Explore our range of high-quality gym gear and apparel!</p>
-        <a href="/shop" class="inline-block rounded-lg bg-gray-700 px-10 py-4 text-center font-medium text-white hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-500 transition duration-300">Shop Now</a>
 
-        <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 px-4 md:px-8 lg:px-12">
-          {/* <!-- Hoodies --> */}
-          <a href="/hoodies" class="bg-gray-900 p-6 md:p-8 lg:p-10 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-800">
-            <div class="h-48 w-full bg-gray-700 mb-4 rounded-lg transition duration-300"></div>
-            <h3 class="text-2xl md:text-3xl font-semibold text-white">Hoodies</h3>
-            <p class="text-gray-400 text-lg md:text-xl">Stay warm and stylish with our premium hoodies.</p>
-          </a>
-
-          {/* <!-- T-Shirts --> */}
-          <a href="/tshirts" class="bg-gray-900 p-6 md:p-8 lg:p-10 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-800">
-            <div class="h-48 w-full bg-gray-700 mb-4 rounded-lg transition duration-300"></div>
-            <h3 class="text-2xl md:text-3xl font-semibold text-white">T-Shirts</h3>
-            <p class="text-gray-400 text-lg md:text-xl">Comfortable and breathable t-shirts for workouts.</p>
-          </a>
-
-          {/* <!-- Shorts --> */}
-          <a href="/shorts" class="bg-gray-900 p-6 md:p-8 lg:p-10 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-800">
-            <div class="h-48 w-full bg-gray-700 mb-4 rounded-lg transition duration-300"></div>
-            <h3 class="text-2xl md:text-3xl font-semibold text-white">Shorts</h3>
-            <p class="text-gray-400 text-lg md:text-xl">Perfect fit shorts for your gym sessions.</p>
-          </a>
-
-          {/* <!-- Accessories --> */}
-          <a href="/accessories" class="bg-gray-900 p-6 md:p-8 lg:p-10 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-gray-800">
-            <div class="h-48 w-full bg-gray-700 mb-4 rounded-lg transition duration-300"></div>
-            <h3 class="text-2xl md:text-3xl font-semibold text-white">Accessories</h3>
-            <p class="text-gray-400 text-lg md:text-xl">Explore our range of gym accessories.</p>
-          </a>
-        </div>
-
-        <a href="/shop" class="mt-8 inline-block rounded-lg bg-gray-700 px-8 py-3 text-center font-medium text-white hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-500 transition duration-300">See More</a>
-      </section>
 
 
     </div>

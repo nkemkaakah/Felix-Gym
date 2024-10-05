@@ -1,8 +1,11 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
-    'node_modules/flowbite-react/lib/esm/**/*.js',
+    'node_modules/flowbite-react/lib/esm/**/*.js', // Add Flowbite components
+    'node_modules/flowbite/**/*.js', // Add Flowbite base
   ],
   theme: {
     fontFamily: {
@@ -43,15 +46,21 @@ export default {
           "800": "#1e40af",
           "900": "#1e3a8a",
           "950": "#172554"
-        }
+        },
+        neutral: {
+          100: '#ffffff',
+          200: '#dedee3',
+          300: '#9797a1',
+          400: '#595962',
+          500: '#131316',
+        },
       },
       fontFamily: {
-        'body': [
+        body: [
           'Inter',
           'ui-sans-serif',
           'system-ui',
           '-apple-system',
-          'system-ui',
           'Segoe UI',
           'Roboto',
           'Helvetica Neue',
@@ -63,12 +72,11 @@ export default {
           'Segoe UI Symbol',
           'Noto Color Emoji'
         ],
-        'sans': [
+        sans: [
           'Inter',
           'ui-sans-serif',
           'system-ui',
           '-apple-system',
-          'system-ui',
           'Segoe UI',
           'Roboto',
           'Helvetica Neue',
@@ -88,7 +96,7 @@ export default {
       }
     },
     backgroundImage: {
-        banner:"url('src/assets/IMG_1064.JPG')"
+        banner: "url('src/assets/IMG_1064.JPG')"
     },
     backgroundSize: {
       auto: 'auto',
@@ -100,7 +108,5 @@ export default {
   plugins: [
     require('flowbite/plugin'),
     require('@tailwindcss/aspect-ratio'),
-
-  ]
-}
-
+  ],
+});

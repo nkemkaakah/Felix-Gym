@@ -15,17 +15,16 @@ const App = () => {
     delay:400
   })
   return (
-    <div className="app  ">
+    <div className="app">
       <Navbar />
-      <div className=' flex-1 '>
+      
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/coaching" element={<Coaching />} />
           <Route path="/shop" element={<Shop />} />
         </Routes>
-      </div>
-      <Footer />
-      <div className='h-[40000px]'></div>
+      
+     
     </div>
   )
 }
