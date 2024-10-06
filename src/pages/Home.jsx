@@ -9,6 +9,7 @@ import community_logo from '../assets/community.svg'
 import TestimonialSection16 from '../components/Community';
 import ComingSoon1 from '../components/ComingSoon';
 import Faqs4 from '../components/Faqs';
+import GetStarted from '../components/GetStarted';
 
 plans: [
   {
@@ -51,10 +52,6 @@ const Home = () => {
     <div className=''>
       {/* hero section */}
       <Banner />
-
-
-
-
 
       {/* shop coming soon */}
       {/* <ComingSoon1/> */}
@@ -121,7 +118,7 @@ const Home = () => {
           <div className="flex justify-center">
             <div className="relative inline-block">
               <div className="absolute inset-0 bg-green-200 rounded-lg opacity-50 animate__animated animate__pulse animate__infinite"></div>
-              <button className="relative z-10 bg-transparent    px-12 py-5 bg-green-300 text-white shadow-lg transition duration-300 ease-in-out transform hover:bg-green-400 hover:text-white hover:scale-105">
+              <button className="relative z-10 bg-transparent    px-12 py-5 !bg-green-300 text-white shadow-lg transition duration-300 ease-in-out transform hover:bg-green-400 hover:text-white hover:scale-105">
                 Notify Me
               </button>
             </div>
@@ -132,13 +129,11 @@ const Home = () => {
       {/* section-title-group max-w-[240px] px-4 lg:px-0 lg:ml-0 mx-auto */}
      <TestimonialSection16/>
 
-
-
-
       {/* leanr from a pro section w video */}
       {/* FAQs */}
       <Faqs4 />
       {/**get started */}
+      <GetStarted />
 
 
 

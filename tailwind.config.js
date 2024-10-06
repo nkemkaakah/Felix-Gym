@@ -29,9 +29,14 @@ module.exports = withMT({
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         },
+        'fade-slide-up': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
       },
       animation: {
         float: 'float 3s ease-in-out infinite',
+        'fade-slide-up': 'fade-slide-up 1s ease-out forwards',
       },
       colors: {
         primary: {
@@ -70,7 +75,7 @@ module.exports = withMT({
           'Apple Color Emoji',
           'Segoe UI Emoji',
           'Segoe UI Symbol',
-          'Noto Color Emoji'
+          'Noto Color Emoji',
         ],
         sans: [
           'Inter',
@@ -95,7 +100,7 @@ module.exports = withMT({
         '25': '6.5rem'
       }
     },
-    backgroundImage: {
+    backgroundImage:    {
         banner: "url('src/assets/IMG_1064.JPG')"
     },
     backgroundSize: {
