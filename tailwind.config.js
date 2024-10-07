@@ -21,7 +21,7 @@ module.exports = withMT({
       sm: '640px',
       md: '768px',
       lg: '1024px',
-      xl: '1038px',
+      xl: '1440px',
     },
     extend: {
       keyframes: {
@@ -32,11 +32,15 @@ module.exports = withMT({
         'fade-slide-up': {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
+        },zoom: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.1)' },
         },
       },
       animation: {
         float: 'float 3s ease-in-out infinite',
         'fade-slide-up': 'fade-slide-up 1s ease-out forwards',
+        zoom: 'zoom 3s ease-in-out infinite',
       },
       colors: {
         primary: {

@@ -53,7 +53,7 @@ const testimonials = [
 
 export function TestimonialSection16() {
   return (
-    <section className="px-8 py-10 lg:py-28 bg-black/90">
+    <section className="px-8 py-10 lg:py-28 ">
       <div className="container mx-auto">
         <div className="flex items-center -space-x-0 space-y-5 mb-[50px] lg:mb-[80px] px-4 lg:px-0 lg:ml-0">
           {/* <img src={community_logo} alt="community logo" className="bg-white" /> */}

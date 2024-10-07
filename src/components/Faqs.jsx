@@ -64,7 +64,7 @@ export function Faqs4() {
     return (
         <section
             ref={sectionRef}
-            className={`px-8 py-20 bg-black/90 ${isVisible ? "fade-in visible" : "fade-in"}`}
+            className={`px-8 py-20  ${isVisible ? "fade-in visible" : "fade-in"}`}
         >
 
             <div className="container mx-auto">
@@ -81,7 +81,7 @@ export function Faqs4() {
                     </Typography>
                     <Button
                         ripple={true}
-                        className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-white hover:text-black focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 text-[50px] bg-black/90 font-bold uppercase text-white transition-all !duration-300"
+                        className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-white hover:text-black focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 text-[50px]  font-bold uppercase text-white transition-all !duration-300"
                     >
                         Start Now!
                     </Button>
