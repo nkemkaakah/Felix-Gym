@@ -24,6 +24,7 @@ const App = () => {
           <Route path="/shop" element={<Shop />} />
         </Routes>
       
+      <Footer />
      
     </div>
   )

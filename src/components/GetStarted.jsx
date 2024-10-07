@@ -26,7 +26,7 @@ export function GetStarted() {
                 </Button>
                 <Typography
                     variant="lead"
-                    className=" mt-5 mx-auto max-w-lg  !text-white font-bold"
+                    className=" mt-5 mx-auto max-w-lg text-xl  !text-white font-bold"
                 >
                     NO EXCUSES, NO LIMITS, ONLY SUCCESS.
                 </Typography>
