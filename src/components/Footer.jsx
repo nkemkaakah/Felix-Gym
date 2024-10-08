@@ -74,7 +74,7 @@ const Footer = () => {
                                     clipRule="evenodd"
                                 />
                             </svg>
-                            <span className="text-[30px] text-white font-bold transition-transform hover:scale-105">Facebook</span>
+                            <span className="md:text-[30px] text-[20px] text-white font-bold transition-transform hover:scale-105">Facebook</span>
                         </Typography>
 
                         {/* Instagram */}
@@ -86,7 +86,7 @@ const Footer = () => {
                                     clipRule="evenodd"
                                 />
                             </svg>
-                            <span className="text-[30px] text-white font-bold transition-transform hover:scale-105">Instagram</span>
+                            <span className="md:text-[30px] text-[20px] text-white font-bold transition-transform hover:scale-105">Instagram</span>
                         </Typography>
 
                         {/* Twitter 
@@ -102,7 +102,7 @@ const Footer = () => {
                             <svg className="h-6 w-6" fill="white" viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M21.8 8.001s-.195-1.376-.794-1.98c-.762-.8-1.617-.804-2.006-.85C16.307 5 12 5 12 5s-4.308 0-6.999.171c-.389.045-1.244.05-2.006.85-.6.604-.794 1.98-.794 1.98S2 9.621 2 11.241v1.528c0 1.62.195 3.24.195 3.24s.195 1.376.794 1.98c.762.8 1.762.775 2.208.86 1.604.154 6.803.169 6.803.169s4.308 0 7-.171c.389-.045 1.244-.05 2.006-.85.6-.604.794-1.98.794-1.98s.195-1.62.195-3.24v-1.528c0-1.62-.195-3.24-.195-3.24zm-12.8 6V9l5.23 2.506L9 14z" />
                             </svg>
-                            <span className="text-[30px] text-white font-bold transition-transform hover:scale-105">YouTube</span>
+                            <span className="md:text-[30px] text-[20px] text-white font-bold transition-transform hover:scale-105">YouTube</span>
                         </Typography>
                     </div>
                 </div>

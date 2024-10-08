@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import logo from '../assets/Gutzfit logo.png'
-
-import { RiMenu4Fill, RiCloseFill } from 'react-icons/ri'
+import { RiCloseFill, RiMenu4Fill } from 'react-icons/ri'
+import white_logo from '../assets/White Gutzfit logo WP.png'
 
 const Navbar = () => {
 
@@ -10,16 +9,29 @@ const Navbar = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            window.scrollY > 80 ? setIsActive(true) : setIsActive(false)
-        })
-    })
+            window.scrollY > 80 ? setIsActive(true) : setIsActive(false);
+        });
+
+        return () => {
+            window.removeEventListener('scroll', () => { });
+        };
+    }, []);
+
+    // Prevent scrolling when the mobile menu is active
+    useEffect(() => {
+        if (navmobile) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [navmobile]);
 
     return (
-        <header className={`${isActive ? 'bg-black py-[16px]' : 'bg-transparent py-[20px]'} fixed max-w-[1440px] z-30 left-0 right-0 mx-auto flex justify-between items-center px-[20px] lg:px-[80px] transition-all duration-300`}>
+        <header className={`${isActive ? 'bg-black py-[16px]' : 'bg-transparent py-[20px]'} fixed w-full z-30 left-0 right-0 mx-auto flex justify-between items-center px-[20px] lg:px-[80px] transition-all duration-300`}>
 
             <a href="" className='flex items-center gap-2 '>
-                <img src={logo} alt="" className=" h-[60px]" />
-                <h1 className='text-white text-4xl'>Felix Gym</h1>
+                <img src={white_logo} alt="" className=" h-[60px]" />
+                {/* <h1 className='text-white text-4xl'>Felix Gym</h1> */}
             </a>
             <nav className='hidden lg:flex'>
                 <ul className='flex text-white gap-x-8'>
@@ -35,14 +47,14 @@ const Navbar = () => {
                 <button className='btn btn-sm text-white hover:text-primary-200 transition'>Login</button>
                 <button className='btn btn-sm btn-primary'>SignUp</button>
             </div>
-            <div onClick={() => setNavMobile(!navmobile)} className='lg:hidden absolute right-4 top-0'>
+            <div onClick={() => setNavMobile(!navmobile)} className='lg:hidden absolute right-4 top-6'>
                 {navmobile ? (<RiCloseFill className='text-primary-200 text-3xl cursor-pointer' />) :
                     (
                         <RiMenu4Fill className='text-primary-200 text-3xl cursor-pointer' />
                     )
                 }
             </div>
-            <nav className={`${navmobile ? 'min-h-screen' : 'min-h-0'} lg:hidden w-full bg-neutral-500 fixed top-0 left-0 right-0 -bottom-12 -z-10 overflow-hidden transition-all h-0`} >
+            <nav className={`${navmobile ? 'h-screen' : 'h-0'} lg:hidden w-full bg-neutral-500 fixed top-0 left-0 right-0 bottom-0 -z-10 overflow-hidden transition-all h-0`} >
                 <ul className='w-full h-full flex flex-col justify-center items-center gap-y-8'>
                     <li><a className='text-white text-body-md' href="/">Home</a></li>
                     <li><a className='text-white text-body-md' href="/workouts">Workouts</a></li>
