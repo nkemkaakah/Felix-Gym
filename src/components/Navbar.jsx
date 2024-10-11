@@ -30,7 +30,7 @@ const Navbar = () => {
         <header className={`${isActive ? 'bg-black py-[16px]' : 'bg-transparent py-[20px]'} fixed w-full z-30 left-0 right-0 mx-auto flex justify-between items-center px-[20px] lg:px-[80px] transition-all duration-300`}>
 
             <a href="" className='flex items-center gap-2 '>
-                <img src={white_logo} alt="" className=" h-[60px]" />
+                <img src={white_logo} alt="" className=" h-[60px] hover:scale-125 transition-all duration-300" />
                 {/* <h1 className='text-white text-4xl'>Felix Gym</h1> */}
             </a>
             <nav className='hidden lg:flex'>

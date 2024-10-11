@@ -1,52 +1,51 @@
-import React from 'react';
+import {
+  Button,
+  Card,
+  CardBody,
+  Typography
+} from "@material-tailwind/react";
+
+import videoBg from '../assets/Copy of GUTZFIT YOUTUBE .mp4';
 import pricing_icon from '../assets/pricing.svg';
 import Banner from '../components/Banner';
 import TestimonialSection16 from '../components/Community';
 import Faqs4 from '../components/Faqs';
 import GetStarted from '../components/GetStarted';
-import videoBg from '../assets/Copy of GUTZFIT YOUTUBE .mp4'
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
 
-plans: [
-  {
-    name: 'Basic',
-    price: '20',
-    list: [
-      { name: 'unlimited gym access' },
-      { name: '1 training programs' },
-      { name: 'free fitness consultation' },
-    ],
-    delay: 600,
-  },
-  {
-    name: 'Premium',
-    price: '35',
-    list: [
-      { name: 'unlimited gym access' },
-      { name: '5 training programs' },
-      { name: 'free fitness consultation' },
-      { name: 'personal trainer' },
-    ],
-    delay: 800,
-  },
-  {
-    name: 'Elite',
-    price: '49',
-    list: [
-      { name: 'unlimited gym access' },
-      { name: 'all training programs' },
-      { name: 'free fitness consultation' },
-      { name: 'personal trainer' },
-      { name: '50% off drinks' },
-    ],
-  }
-]
+// plans: [
+//   {
+//     name: 'Basic',
+//     price: '20',
+//     list: [
+//       { name: 'unlimited gym access' },
+//       { name: '1 training programs' },
+//       { name: 'free fitness consultation' },
+//     ],
+//     delay: 600,
+//   },
+//   {
+//     name: 'Premium',
+//     price: '35',
+//     list: [
+//       { name: 'unlimited gym access' },
+//       { name: '5 training programs' },
+//       { name: 'free fitness consultation' },
+//       { name: 'personal trainer' },
+//     ],
+//     delay: 800,
+//   },
+//   {
+//     name: 'Elite',
+//     price: '49',
+//     list: [
+//       { name: 'unlimited gym access' },
+//       { name: 'all training programs' },
+//       { name: 'free fitness consultation' },
+//       { name: 'personal trainer' },
+//       { name: '50% off drinks' },
+//     ],
+//   }
+// ]
 
 const Home = () => {
 
@@ -104,7 +103,12 @@ const Home = () => {
               </Typography>
               <Button
                 ripple={true}
-                className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-white hover:text-black focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 text-[50px]  font-bold uppercase text-white transition-all !duration-300 xl:w-full xl:mt-10 "
+                className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-white hover:text-black focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 text-[50px]  font-bold uppercase text-white transition-all !duration-300"
+                onClick={() => {
+                  const section = document.querySelector("#questionnaire-section");
+                  section.scrollIntoView({ behavior: "smooth" });
+                }}
+
               >
                 Start Now!
               </Button>
