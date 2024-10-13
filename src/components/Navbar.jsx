@@ -34,7 +34,7 @@ const Navbar = () => {
                 {/* <h1 className='text-white text-4xl'>Felix Gym</h1> */}
             </a>
             <nav className='hidden lg:flex'>
-                <ul className='flex text-white gap-x-8'>
+                <ul className='flex text-white xl:gap-x-24 gap-x-10 '>
                     <li><a className='text-white text-body-md hover:text-primary-200 transition' href="/">Home</a></li>
                     <li><a className='text-white text-body-md hover:text-primary-200 transition' href="/workouts">Workouts</a></li>
                     <li><a className='text-white text-body-md hover:text-primary-200 transition' href="#community">Community</a></li>

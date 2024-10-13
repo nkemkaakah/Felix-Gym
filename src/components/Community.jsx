@@ -1,11 +1,12 @@
+/* eslint-disable react/prop-types */
 import {
   Card,
   CardBody,
-  Typography,
   CardHeader,
+  Typography,
 } from "@material-tailwind/react";
-import community_logo from '../assets/community.svg'
 import { MdOutlineMessage } from "react-icons/md";
+import FadeInSection from "./FadeInSection";
 
 function TestimonialCard({ img, client, title, clientInfo }) {
   return (
@@ -53,53 +54,59 @@ const testimonials = [
 
 export function TestimonialSection16() {
   return (
-    <section className="px-8 py-10 lg:py-28 ">
+    <section className="px-8 py-10 lg:py-28">
       <div className="container mx-auto">
-        <div className="flex items-center -space-x-0 space-y-5 mb-[50px] lg:mb-[80px] px-4 lg:px-0 lg:ml-0">
-          {/* <img src={community_logo} alt="community logo" className="bg-white" /> */}
-          <MdOutlineMessage color="white" size={100} />
-          <Typography
-            variant="h2"
-            color="white" 
-            className="mb-4 !text-2xl lg:!text-[50px] font-extrabold !special-font uppercase animate-fade-slide-up"
-          >
-            Community
-          </Typography>
-
-        </div>
-
-        <Typography variant="lead" className="max-w-3xl text-gray-300 mb-10 lg:mb-20">
-          From life-enhancing gadgets to unparalleled customer support, and transformative learning opportunities.
-        </Typography>
-        <div className="grid gap-8 grid-cols-1 lg:grid-cols-2">
-          {testimonials.map((props, key) => (
-            <TestimonialCard key={key} {...props} />
-          ))}
-        </div>
-
-        <Card shadow={false} className="mt-8 bg-blue   text-center rounded-2xl p-6">
-          <CardHeader color="transparent" floated={false} shadow={false}>
+        {/* Wrap the header section */}
+        <FadeInSection>
+          <div className="flex items-center -space-x-0 space-y-5 mb-[50px] lg:mb-[80px] px-4 lg:px-0 lg:ml-0">
+            <MdOutlineMessage color="white" size={100} />
             <Typography
-              color="white" // Use green color for the quote
-              className="mb-4 !text-2xl lg:!text-3xl max-w-4xl !leading-snug mx-auto font-bold"
+              variant="h2"
+              color="white"
+              className="mb-4 !text-2xl lg:!text-[50px] font-extrabold !special-font uppercase animate-fade-slide-up"
             >
-              &quot;The gym has been a game-changer for my fitness journey. The state-of-the-art equipment and supportive community have helped me achieve my goals faster than I ever thought possible!&quot;
+              Community
             </Typography>
-          </CardHeader>
-          <CardBody className="items-center mx-auto py-2">
-            {/* <img
-                src="/image/gym-user.svg"
-                className="max-w-[8rem] mx-auto grayscale"
-                alt="gym user"
-              /> */}
-            <Typography variant="h6" color="white">
-              Alex Johnson
-            </Typography>
-            <Typography variant="paragraph" className="font-normal text-gray-300">
-              Fitness Enthusiast
-            </Typography>
-          </CardBody>
-        </Card>
+          </div>
+        </FadeInSection>
+
+        {/* Wrap the description text */}
+        <FadeInSection>
+          <Typography variant="lead" className="max-w-3xl text-gray-300 mb-10 lg:mb-20 font-semibold">
+            From life-enhancing gadgets to unparalleled customer support, and transformative learning opportunities.
+          </Typography>
+        </FadeInSection>
+
+        {/* Wrap the testimonial cards */}
+        <FadeInSection>
+          <div className="grid gap-8 grid-cols-1 lg:grid-cols-2">
+            {testimonials.map((props, key) => (
+              <TestimonialCard key={key} {...props} />
+            ))}
+          </div>
+        </FadeInSection>
+
+        {/* Wrap the quote card */}
+        <FadeInSection>
+          <Card shadow={false} className="mt-8 bg-blue text-center rounded-2xl p-6">
+            <CardHeader color="transparent" floated={false} shadow={false}>
+              <Typography
+                color="white"
+                className="mb-4 !text-2xl lg:!text-3xl max-w-4xl !leading-snug mx-auto font-bold"
+              >
+                &quot;The gym has been a game-changer for my fitness journey. The state-of-the-art equipment and supportive community have helped me achieve my goals faster than I ever thought possible!&quot;
+              </Typography>
+            </CardHeader>
+            <CardBody className="items-center mx-auto py-2">
+              <Typography variant="h6" color="white">
+                Alex Johnson
+              </Typography>
+              <Typography variant="paragraph" className="font-normal text-gray-300">
+                Fitness Enthusiast
+              </Typography>
+            </CardBody>
+          </Card>
+        </FadeInSection>
       </div>
     </section>
   );
