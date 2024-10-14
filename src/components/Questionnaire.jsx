@@ -191,9 +191,9 @@ const Questionnaire = () => {
   return (
     <div className={`w-full h-full flex flex-col ${showCongrats ? 'items-start' : ''} items-ce justify-center`}>
       {showCongrats ? (
-        <div className="flex flex-col items-center mt-20  text-justify  animate-fadeIn transition-all duration-500 w-[60%] sm:w-[80%]">
+        <div className="w-full flex flex-col items-center mt-20  text-justify  animate-fadeIn transition-all duration-500  sm:w-[80%]">
 
-          <h2 className="text-xl sm:text-2xl md:text-3xl xl:text-[40px] text-white uppercase font-bold mb-4 flex items-center gap-2"><FaCheckCircle className="text-green-500 text-6xl mb-4" />Congratulations!</h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl xl:text-[40px] text-white uppercase font-bold mb-4 flex xs:flex-row flex-col items-center gap-2"><FaCheckCircle className="text-green-500 sm:text-6xl xs:text-5xl text-3xl mb-4" />Congratulations!</h2>
           <p className="text-md sm:text-[20px] text-white mb-6 font-semibold">
             We can&apos;t wait to start working with you! Please check your email for more details.
           </p>

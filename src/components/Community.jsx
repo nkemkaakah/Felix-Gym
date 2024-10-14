@@ -54,7 +54,7 @@ const testimonials = [
 
 export function TestimonialSection16() {
   return (
-    <section className="px-8 py-10 lg:py-28">
+    <section className="px-8 py-10 lg:py-28" id="community">
       <div className="container mx-auto">
         {/* Wrap the header section */}
         <FadeInSection>

@@ -65,6 +65,7 @@ export function Faqs4() {
         <section
             ref={sectionRef}
             className={`px-8 py-20  ${isVisible ? "fade-in visible" : "fade-in"}`}
+            id="faqs"
         >
 
             <div className="container mx-auto">
