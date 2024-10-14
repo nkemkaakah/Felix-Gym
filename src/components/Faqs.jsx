@@ -1,6 +1,6 @@
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 import { Button, Typography } from "@material-tailwind/react";
-import  { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const faqs = [
     {

@@ -146,7 +146,23 @@ const Questionnaire = () => {
 
     // Show congratulations message
     console.log("Submitting answers:", answers);
-    console.log("COntact details", contactDetails)
+    console.log("Contact details", contactDetails);
+
+    // Send answers and contact details to the API
+    fetch('http://localhost:3000/api/email/questionnare', { // Replace with your API endpoint
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ answers, contactDetails }), // Send both answers and contact details
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data); // Handle success response
+    })
+    .catch((error) => {
+      console.error('Error:', error); // Handle error response
+    });
   };
 
   const handleShowCongrats = () => {
@@ -175,10 +191,10 @@ const Questionnaire = () => {
   return (
     <div className={`w-full h-full flex flex-col ${showCongrats ? 'items-start' : ''} items-ce justify-center`}>
       {showCongrats ? (
-        <div className="flex flex-col items-center  text-justify animate-fadeIn transition-all duration-500 w-[60%] sm:w-[80%]">
+        <div className="flex flex-col items-center mt-20  text-justify  animate-fadeIn transition-all duration-500 w-[60%] sm:w-[80%]">
 
-          <h2 className="text-3xl md:text-5xl text-white font-bold mb-4 flex items-center gap-2"><FaCheckCircle className="text-green-500 text-6xl mb-4" />Congratulations!</h2>
-          <p className="text-xl text-white mb-6 font-semibold">
+          <h2 className="text-xl sm:text-2xl md:text-3xl xl:text-[40px] text-white uppercase font-bold mb-4 flex items-center gap-2"><FaCheckCircle className="text-green-500 text-6xl mb-4" />Congratulations!</h2>
+          <p className="text-md sm:text-[20px] text-white mb-6 font-semibold">
             We can&apos;t wait to start working with you! Please check your email for more details.
           </p>
           <p className="text-lg text-gray-300 font-semibold">
@@ -235,7 +251,7 @@ const Questionnaire = () => {
                       <button
                         key={index}
                         onClick={() => handleOptionClick(option)}
-                        className={`sm:px-8 sm:py-4 px-6 py-3  text-md md:text-xl lg:text-2xl font-semibold rounded-md border border-white ${selectedOption === option ? 'bg-green-500' : 'bg-transparent'} hover:bg-green-300 transition-all duration-300`}
+                        className={`sm:px-8 sm:py-4 px-6 py-3  text-lg md:text-xl lg:text-2xl font-semibold rounded-md border border-white ${selectedOption === option ? 'bg-green-500' : 'bg-transparent'} hover:bg-green-300 transition-all duration-300`}
                       >
                         {option}
                       </button>
@@ -297,10 +313,10 @@ const Questionnaire = () => {
 
           </>
 
-          <div className="mt-8 flex justify-center gap-20 items-center w-full max-w-md">
+          <div className="mt-8 flex justify-center sm:flex-row flex-col sm:gap-20 gap-5 items-center w-full max-w-md">
             <Button
               variant="outlined"
-              className="text-white hover:bg-primary-100 border-white sm:py-3 sm:px-6 py-2 px-4"
+              className="text-white hover:bg-primary-100 border-white sm:py-3 sm:px-6 py-2 px-4 w-full" // Added min-width
               onClick={handleBackClick}
               disabled={currentStep === 0}
             >
@@ -310,7 +326,7 @@ const Questionnaire = () => {
             {isFormStep ? (
               <Button
                 variant="outlined"
-                className="text-white hover:bg-primary-100 border-white sm:py-3 sm:px-6 py-2 px-4"
+                className="text-white hover:bg-primary-100 border-white sm:py-3 sm:px-6 py-2 px-4 w-full" // Added min-width
                 onClick={handleSubmit}
               >
                 Submit
@@ -318,7 +334,7 @@ const Questionnaire = () => {
             ) : (
               <Button
                 variant="outlined"
-                className="text-white hover:bg-primary-100 border-white sm:py-3 sm:px-6 py-2 px-4"
+                className="text-white hover:bg-primary-100 border-white sm:py-3 sm:px-6 py-2 px-4 w-full" // Added min-width
                 onClick={handleNextClick}
                 disabled={!selectedOption && !textareaValue}
               >
