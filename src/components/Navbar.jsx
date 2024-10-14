@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { RiCloseFill, RiMenu4Fill } from 'react-icons/ri'
 import white_logo from '../assets/White Gutzfit logo WP.png'
 

@@ -8,7 +8,7 @@ import {
 import { MdOutlineMessage } from "react-icons/md";
 import FadeInSection from "./FadeInSection";
 
-function TestimonialCard({ img, client, title, clientInfo }) {
+function TestimonialCard({  client, title, clientInfo }) {
   return (
     <Card
       shadow={false}
