@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Button, Typography, Input } from "@material-tailwind/react";
 
 export function ComingSoon1() {

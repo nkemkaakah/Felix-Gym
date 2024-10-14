@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CommunityImg1 from '../assets/img1.png';
 import CommunityImg2 from '../assets/img2.png';
@@ -45,7 +45,7 @@ const WorkoutSlider = () => {
 
         >
             {testimonials.map((testimonial, idx) => {
-                const { image, name, message } = testimonial
+                const { image, } = testimonial
                 return (
                     <SwiperSlide key={idx}>
                         <div className='relative'>

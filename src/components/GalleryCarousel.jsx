@@ -1,7 +1,7 @@
 import { Carousel, IconButton } from "@material-tailwind/react";
 import img1 from '../assets/shared7.jpg'
 import img3 from '../assets/IMG_0786.JPG'
-import img4 from '../assets/IMG_0144.JPG'
+
 import img2 from '../assets/Mens Classic - Overall_102810_Original.jpg'
 export function GalleryWithCarousel() {
   return (
