@@ -58,8 +58,8 @@ const Footer = () => {
                 </footer>
             </FadeInSection>
             <FadeInSection>
-                <div className="bg-green-400 px-6 py-3">
-                    <Typography color="blue-gray" className="font-semibold text-3xl text-white ">
+                <div className="bg-primary-200 px-6 py-3">
+                    <Typography color="blue-gray" className="font-semibold text-3xl text-blue ">
                         &copy; 2024 GUZFIT | All rights reserved | Terms and Conditions | Privacy Policy
                     </Typography>
                 </div>

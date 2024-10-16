@@ -48,7 +48,7 @@ export default withMT({
         primary: {
           "50": "#eff6ff",
           "100": '#a5ffce',
-          "200": '#4ae290',
+          "200": '#FFFFF0',
           "300": '25c870',
           "400": "#60a5fa",
           "500": "#3b82f6",

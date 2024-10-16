@@ -7,7 +7,7 @@ const Banner = () => {
         <div className='flex items-center h-full relative '>
           <div className='text-white max-w-[60%] xl:w-[70%]  z-10 pl-8 lg:pl-4 text-left'>
             <h1 className=' md:text-[70px] text-3xl xl:text-center  font-bold text-white mb-8 text-shadow' data-aos='fade-down' data-aos-delay='500'>
-             <span className='uppercase text-green-400'>Guzfit </span>
+             <span className='uppercase text-primary-200'>Guzfit </span>
             </h1>
             {/* <p className='max-w-[415px] text-body-md lg:text-body-lg mb-8 ml-8' data-aos='fade-down' data-aos-delay='600'>
               We provide serious fitness but within a fun and friendly, safe space

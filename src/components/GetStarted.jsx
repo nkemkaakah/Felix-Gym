@@ -4,7 +4,7 @@ import FadeInSection from "./FadeInSection";
 
 export function GetStarted() {
     return (
-        <section className="lg:py-28 py-10 px-8 xl:flex xl:gap-6 xl:justify-between border-4 border-green-400 rounded-t-[30px]">
+        <section className="lg:py-28 py-10 px-8 xl:flex xl:gap-6 xl:justify-between border-4 border-primary-200 rounded-t-[30px]">
             <div className="container mx-auto mb-10 xl:mt-20 text-center lg:mb-20">
                 {/* Wrap the heading in FadeInSection */}
                 <FadeInSection>

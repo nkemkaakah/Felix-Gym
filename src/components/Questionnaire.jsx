@@ -147,9 +147,10 @@ const Questionnaire = () => {
     // Show congratulations message
     console.log("Submitting answers:", answers);
     console.log("Contact details", contactDetails);
+    
 
     // Send answers and contact details to the API
-    fetch('http://localhost:3000/api/email/questionnare', { // Replace with your API endpoint
+    fetch('https://guzfit-backend.vercel.app/api/email/questionnare', { // Replace with your API endpoint
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -192,7 +193,7 @@ const Questionnaire = () => {
     <div className={`w-full h-full flex flex-col ${showCongrats ? 'items-start' : ''} items-ce justify-center`}>
       {showCongrats ? (
         <div className="w-full flex flex-col items-start mt-20 text-justify animate-fadeIn transition-all duration-500 sm:w-[80%]">
-        <h2 className="text-xl sm:text-2xl md:text-3xl xl:text-[40px] text-white uppercase font-bold mb-4 flex xs:flex-row flex-col items-center gap-2 mr-3">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-[50px] text-white uppercase font-bold mb-4 flex xs:flex-row flex-col items-center gap-2 mr-3">
           <FaCheckCircle className="text-green-500 sm:text-6xl xs:text-5xl text-3xl mb-4" />
           Congratulations!
         </h2>

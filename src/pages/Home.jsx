@@ -66,7 +66,7 @@ const Home = () => {
           <div className="flex justify-center">
             <div className="relative inline-block">
               <div className="absolute inset-0 bg-green-200 rounded-lg opacity-50 animate__animated animate__pulse animate__infinite"></div>
-              <button className="relative z-10 bg-transparent    px-12 py-5 !bg-green-300 text-white shadow-lg transition duration-300 ease-in-out transform hover:bg-green-400 hover:text-white hover:scale-105">
+              <button className="relative z-10 bgtransparent-    px-12 py-5 !bg-primary-200 text-blue-gray-900 shadow-lg transition-all duration-500 ease-in-out transform  hover:text-white hover:!bg-black/90 hover:scale-105">
                 Notify Me
               </button>
             </div>
