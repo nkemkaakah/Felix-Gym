@@ -93,7 +93,7 @@ export function Faqs4() {
                     </Button>
 
                 </div>
-                <div className="max-w-3xl mx-auto grid gap-10">
+                <div className="max-w-5xl mx-auto grid gap-10">
                     {faqs.map(({ title, desc }, index) => (
                         <div key={title}>
                             <div className="flex justify-between items-center pb-6">

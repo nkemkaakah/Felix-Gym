@@ -5,8 +5,8 @@ const Banner = () => {
     <section id='questionnaire-section' className=' bg-transparent h-[790px] w-full'>
       <div className='container mx-auto h-full'>
         <div className='flex items-center h-full relative '>
-          <div className='text-white max-w-[60%]  z-10 pl-8 lg:pl-4 text-left'>
-            <h1 className=' md:text-[70px] text-3xl  font-bold text-white mb-8 text-shadow' data-aos='fade-down' data-aos-delay='500'>
+          <div className='text-white max-w-[60%] xl:w-[70%]  z-10 pl-8 lg:pl-4 text-left'>
+            <h1 className=' md:text-[70px] text-3xl xl:text-center  font-bold text-white mb-8 text-shadow' data-aos='fade-down' data-aos-delay='500'>
              <span className='uppercase text-green-400'>Guzfit </span>
             </h1>
             {/* <p className='max-w-[415px] text-body-md lg:text-body-lg mb-8 ml-8' data-aos='fade-down' data-aos-delay='600'>
