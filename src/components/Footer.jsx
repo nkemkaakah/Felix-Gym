@@ -16,7 +16,7 @@ const Footer = () => {
                                 color="blue-gray"
                                 className=" font-extrabold text-[40px] !text-white transition-colors uppercase hover:text-green-500 focus:text-green-500"
                             >
-                                Guzfit
+                                Gutzfit
                             </Typography>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ const Footer = () => {
             <FadeInSection>
                 <div className="bg-primary-200 px-6 py-3">
                     <Typography color="blue-gray" className="font-semibold text-3xl text-blue ">
-                        &copy; 2024 GUZFIT | All rights reserved | Terms and Conditions | Privacy Policy
+                        &copy; 2024 GUTZFIT | All rights reserved | Terms and Conditions | Privacy Policy
                     </Typography>
                 </div>
             </FadeInSection>

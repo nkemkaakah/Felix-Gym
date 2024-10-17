@@ -264,7 +264,7 @@ const Questionnaire = () => {
                   <textarea
                     value={textareaValue}
                     onChange={handleTextareaChange}
-                    className="w-full max-w-lg p-4 border border-gray-300 rounded-md bg-gray-100 text-black text-lg"
+                    className="w-full  p-4 border border-gray-300 rounded-md bg-gray-100 text-black text-lg"
                     placeholder="Describe your current workout routine"
                     rows={5}
                   />
