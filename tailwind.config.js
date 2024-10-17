@@ -107,7 +107,7 @@ export default withMT({
       }
     },
     backgroundImage:    {
-        banner: "url('src/assets/IMG_1064.JPG')"
+        banner: "url('/IMG_1064.JPG')"
     },
     backgroundSize: {
       auto: 'auto',
