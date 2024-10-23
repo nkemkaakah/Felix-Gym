@@ -218,7 +218,7 @@ const Questionnaire = () => {
           >
             {isFormStep ? (
               <div className="flex flex-col gap-4 mr-2">
-                <h2 className="text-3xl text-white font-bold mb-6">Contact Details</h2>
+                <h2 className="text-3xl text-black font-bold mb-6">Contact Details</h2>
                 <input
                   type="text"
                   name="name"
@@ -247,14 +247,14 @@ const Questionnaire = () => {
 
             ) : (
               <>
-                <h2 className="md:text-3xl text-2xl xl:text-center lg:text-5xl text-white font-bold mb-6">{questions[currentStep].question}</h2>
+                <h2 className="md:text-3xl text-2xl xl:text-center lg:text-5xl text-black font-bold mb-6">{questions[currentStep].question}</h2>
                 {!isTextareaQuestion ? (
-                  <div className="flex flex-col gap-4">
+                  <div className="flex flex-col gap-4 text-black">
                     {questions[currentStep].options?.map((option, index) => (
                       <button
                         key={index}
                         onClick={() => handleOptionClick(option)}
-                        className={`sm:px-8 sm:py-4 px-6 py-3  text-lg md:text-xl lg:text-2xl font-semibold rounded-md border border-white ${selectedOption === option ? 'bg-green-500' : 'bg-transparent'} hover:bg-green-300 transition-all duration-300`}
+                        className={`sm:px-8 sm:py-4 px-6 py-3  text-lg md:text-xl lg:text-2xl font-semibold rounded-md border border-black ${selectedOption === option ? 'bg-green-500' : 'bg-transparent'} hover:bg-green-300 transition-all duration-300`}
                       >
                         {option}
                       </button>
@@ -264,7 +264,7 @@ const Questionnaire = () => {
                   <textarea
                     value={textareaValue}
                     onChange={handleTextareaChange}
-                    className="w-full  p-4 border border-gray-300 rounded-md bg-gray-100 text-black text-lg"
+                    className="w-full  p-4 border border-black-300 rounded-md bg-gray-100 text-black text-lg focus:border-none outline-none"
                     placeholder="Describe your current workout routine"
                     rows={5}
                   />
@@ -319,7 +319,7 @@ const Questionnaire = () => {
           <div className="mt-8 flex justify-center sm:flex-row flex-col sm:gap-20 gap-5 items-center w-full  ">
             <Button
               variant="outlined"
-              className="text-white hover:bg-primary-100 border-white lg:text-2xl sm:py-3 sm:px-6 py-2 px-4 w-full" // Added min-width
+              className="text-black hover:bg-primary-100 border-black lg:text-2xl sm:py-3 sm:px-6 py-2 px-4 w-full" // Added min-width
               onClick={handleBackClick}
               disabled={currentStep === 0}
             >
@@ -329,7 +329,7 @@ const Questionnaire = () => {
             {isFormStep ? (
               <Button
                 variant="outlined"
-                className="text-white hover:bg-primary-100 border-white sm:py-3 lg:text-2xl sm:px-6 py-2 px-4 w-full" // Added min-width
+                className="text-black hover:bg-primary-100 border-black sm:py-3 lg:text-2xl sm:px-6 py-2 px-4 w-full" // Added min-width
                 onClick={handleSubmit}
               >
                 Submit
@@ -337,7 +337,7 @@ const Questionnaire = () => {
             ) : (
               <Button
                 variant="outlined"
-                className="text-white hover:bg-primary-100 border-white sm:py-3 lg:text-2xl sm:px-6 py-2 px-4 w-full" // Added min-width
+                className="text-black hover:bg-primary-100 border-black sm:py-3 lg:text-2xl sm:px-6 py-2 px-4 w-full" // Added min-width
                 onClick={handleNextClick}
                 disabled={!selectedOption && !textareaValue}
               >

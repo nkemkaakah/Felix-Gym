@@ -59,10 +59,10 @@ export function TestimonialSection16() {
         {/* Wrap the header section */}
         <FadeInSection>
           <div className="flex items-center -space-x-0 space-y-5 mb-[50px] lg:mb-[80px] px-4 lg:px-0 lg:ml-0">
-            <MdOutlineMessage color="white" size={100} />
+            <MdOutlineMessage color="black" size={100} />
             <Typography
               variant="h2"
-              color="white"
+              color="black"
               className="mb-4 !text-2xl lg:!text-[50px] font-extrabold !special-font uppercase animate-fade-slide-up"
             >
               Community
@@ -72,7 +72,7 @@ export function TestimonialSection16() {
 
         {/* Wrap the description text */}
         <FadeInSection>
-          <Typography variant="lead" className="max-w-3xl text-gray-300 mb-10 lg:mb-20 font-semibold">
+          <Typography variant="lead" className="max-w-3xl text-black-300 mb-10 lg:mb-20 font-semibold">
             From life-enhancing gadgets to unparalleled customer support, and transformative learning opportunities.
           </Typography>
         </FadeInSection>
@@ -89,19 +89,19 @@ export function TestimonialSection16() {
         {/* Wrap the quote card */}
         <FadeInSection>
           <Card shadow={false} className="mt-8 bg-blue text-center rounded-2xl p-6">
-            <CardHeader color="transparent" floated={false} shadow={false}>
+            <CardHeader color="" floated={false} shadow={false}>
               <Typography
-                color="white"
+                color="black"
                 className="mb-4 !text-2xl lg:!text-3xl max-w-4xl !leading-snug mx-auto font-bold"
               >
                 &quot;The gym has been a game-changer for my fitness journey. The state-of-the-art equipment and supportive community have helped me achieve my goals faster than I ever thought possible!&quot;
               </Typography>
             </CardHeader>
             <CardBody className="items-center mx-auto py-2">
-              <Typography variant="h6" color="white">
+              <Typography variant="h6" color="black">
                 Alex Johnson
               </Typography>
-              <Typography variant="paragraph" className="font-normal text-gray-300">
+              <Typography variant="paragraph" className="font-semibold text-black-300">
                 Fitness Enthusiast
               </Typography>
             </CardBody>

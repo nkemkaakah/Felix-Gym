@@ -53,10 +53,12 @@ const Home = () => {
     <div className=''>
       {/* hero section */}
       <Banner />
-
+ {/* testimonial */}
+      {/* section-title-group max-w-[240px] px-4 lg:px-0 lg:ml-0 mx-auto */}
+      <TestimonialSection16 />
       {/* shop coming soon */}
       {/* <ComingSoon1/> */}
-      <section className="py-40 bg-white/70"> {/* Dark background for the section */}
+      <section className="py-40 bg-gray-200"> {/* Dark background for the section */}
         <div className="max-w-screen-xl mx-auto text-center">
           <div className='section-title-group max-w-[540px] mx-auto px-4 lg:px-0'>
             <img src={pricing_icon} alt="" />
@@ -73,9 +75,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* testimonial */}
-      {/* section-title-group max-w-[240px] px-4 lg:px-0 lg:ml-0 mx-auto */}
-      <TestimonialSection16 />
+     
 
 
       {/* FAQs */}

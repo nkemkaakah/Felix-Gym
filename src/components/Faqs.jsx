@@ -72,12 +72,12 @@ export function Faqs4() {
                 <div className="mb-14 text-left ml-6 md:ml-0 lg:ml-4">
                     <Typography
                         variant="h1"
-                        color="white"
+                        color="black"
                         className="mb-4 !text-2xl lg:!text-[50px] font-extrabold !special-font uppercase !leading-snug"
                     >
                         FAQS
                     </Typography>
-                    <Typography className="mb-3 font-normal text-[30px] !text-gray-300 lg:max-w-3xl">
+                    <Typography className="mb-3 font-normal text-[30px] !text-black-300 lg:max-w-3xl">
                         ASK US ANYTHING?
                     </Typography>
                     <Button
@@ -98,16 +98,16 @@ export function Faqs4() {
                         <div key={title}>
                             <div className="flex justify-between items-center pb-6">
                                 <Typography
-                                    color="white"
+                                    color="black"
                                     className={`text-[20px] font-bold uppercase transition-shadow duration-300 ${openIndex === index ? "bg-gradient-to-r from-green-400 via-green-500 to-green-600  shadow-lg shadow-green-500/50" : ""}`}
                                 >
                                     {title}
                                 </Typography>
                                 <button onClick={() => handleToggle(index)}>
                                     {openIndex === index ? (
-                                        <ChevronUpIcon className="w-6 h-6 text-gray-300" />
+                                        <ChevronUpIcon className="w-6 h-6 text-black-300" />
                                     ) : (
-                                        <ChevronDownIcon className="w-6 h-6 text-gray-300" />
+                                        <ChevronDownIcon className="w-6 h-6 text-black-300" />
                                     )}
                                 </button>
                             </div>
@@ -115,7 +115,7 @@ export function Faqs4() {
                                 className={`overflow-hidden transition-all duration-300 ease-in-out border-t border-gray-600 pt-4 ${openIndex === index ? "max-h-[200px]" : "max-h-0"
                                     }`}
                             >
-                                <Typography className="font-normal !text-gray-300">
+                                <Typography className="font-normal !text-black-300">
                                     {desc}
                                 </Typography>
                             </div>

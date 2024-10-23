@@ -4,13 +4,13 @@ import FadeInSection from "./FadeInSection";
 
 export function GetStarted() {
     return (
-        <section className="lg:py-28 py-10 px-8 xl:flex xl:gap-6 xl:justify-between border-4 border-primary-200 rounded-t-[30px]">
+        <section className="lg:py-28 py-10 px-8 xl:flex xl:gap-6 xl:justify-between border-4 border-black rounded-t-[30px]">
             <div className="container mx-auto mb-10 xl:mt-20 text-center lg:mb-20">
                 {/* Wrap the heading in FadeInSection */}
                 <FadeInSection>
                     <Typography
-                        color="white"
-                        className="mb-2 font-extrabold text-[40px] sm:text-[50px] md:text-[75px] lg:text-[90px] xl:text-[80px] uppercase text-white animate-zoom"
+                        color="black"
+                        className="mb-2 font-extrabold text-[40px] sm:text-[50px] md:text-[75px] lg:text-[90px] xl:text-[80px] uppercase text-black animate-zoom"
                     >
                         Get started
                     </Typography>
@@ -36,7 +36,7 @@ export function GetStarted() {
                 <FadeInSection>
                     <Typography
                         variant="lead"
-                        className="mt-5 mx-auto max-w-lg text-xl !text-white font-bold"
+                        className="mt-5 mx-auto max-w-lg text-xl !text-black font-bold"
                     >
                         NO EXCUSES, NO LIMITS, ONLY SUCCESS.
                     </Typography>

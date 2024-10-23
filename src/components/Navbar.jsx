@@ -1,7 +1,7 @@
 import  { useEffect, useState } from 'react'
 import { RiCloseFill, RiMenu4Fill } from 'react-icons/ri'
 import white_logo from '../assets/White Gutzfit logo WP.png'
-
+import black_logo from '../assets/Gutzfit logo.png'
 const Navbar = () => {
 
     const [isActive, setIsActive] = useState(false)
@@ -27,20 +27,24 @@ const Navbar = () => {
     }, [navmobile]);
 
     return (
-        <header className={`${isActive ? 'bg-black py-[16px]' : 'bg-transparent py-[20px]'} fixed w-full z-30 left-0 right-0 mx-auto flex justify-between items-center px-[20px] lg:px-[80px] transition-all duration-300`}>
+        <header className={`${isActive ? 'bg-black py-[2px]' : 'bg-transparent py-[3px]'} fixed w-full z-30 left-0 right-0 mx-auto flex justify-between items-center px-[20px] lg:px-[80px] transition-all duration-300`}>
 
-            <a href="" className='flex items-center gap-2 '>
-                <img src={white_logo} alt="" className=" h-[60px] hover:scale-125 transition-all duration-300" />
+            <a href="" className='flex items-center flex-col gap-0 '>
+                {navmobile || isActive?
+                (<img src={white_logo} alt="" className=" h-[120px] hover:scale-105 transition-all duration-300" />):
+                (<img src={black_logo} alt="" className=" h-[120px] hover:scale-105 transition-all duration-300" />)
+            }
                 {/* <h1 className='text-white text-4xl'>Felix Gym</h1> */}
+                <p className={`${ !navmobile ? "text-black":"text-white"} text-sm md:text-md hidden xs:block`}>No Gutz, No Glory</p> 
             </a>
             <nav className='hidden lg:flex'>
-                <ul className='flex text-white xl:gap-x-24 gap-x-10 '>
-                    <li><a className='text-white text-body-md hover:text-green-400 transition duration-300' href="/" onClick={() => setNavMobile(false)}>Home</a></li>
-                    <li><a className='text-white text-body-md hover:text-green-400 transition duration-300' href="/workouts" onClick={() => setNavMobile(false)}>Shop</a></li>
-                    <li><a className='text-white text-body-md hover:text-green-400 transition duration-300' href="#community" onClick={() => setNavMobile(false)}>Community</a></li>
-                    <li><a className='text-white text-body-md hover:text-green-400 transition duration-300' href="#prices" onClick={() => setNavMobile(false)}>Prices</a></li>
-                    <li><a className='text-white text-body-md hover:text-green-400 transition duration-300' href="#faqs" onClick={() => setNavMobile(false)}>FAQs</a></li>
-
+                <ul className='flex text-black xl:gap-x-24 gap-x-10 '>
+                <li><a className='text-black text-body-md hover:text-green-400 transition duration-300' href="/" onClick={() => setNavMobile(false)}>Home</a></li>
+                    <li><a className='text-black text-body-md hover:text-green-400 transition duration-300' href="#prices" onClick={() => setNavMobile(false)}>Online Training</a></li>
+                    <li><a className='text-black text-body-md hover:text-green-400 transition duration-300' href="#shop" onClick={() => setNavMobile(false)}>Shop</a></li>
+                    <li><a className='text-black text-body-md hover:text-green-400 transition duration-300' href="#community" onClick={() => setNavMobile(false)}>Community</a></li>
+                    <li><a className='text-black text-body-md hover:text-green-400 transition duration-300' href="#faqs" onClick={() => setNavMobile(false)}>FAQs</a></li>
+                
                 </ul>
             </nav>
             <div className='hidden lg:flex space-x-4 '>
@@ -50,16 +54,16 @@ const Navbar = () => {
             <div onClick={() => setNavMobile(!navmobile)} className='lg:hidden absolute right-4 top-6'>
                 {navmobile ? (<RiCloseFill className='text-primary-200 text-3xl cursor-pointer' />) :
                     (
-                        <RiMenu4Fill className='text-primary-200 text-3xl cursor-pointer' />
+                        <RiMenu4Fill className={`${isActive?'text-white':"text-black"} text-3xl cursor-pointer`} />
                     )
                 }
             </div>
             <nav className={`${navmobile ? 'h-screen' : 'h-0'} lg:hidden w-full bg-neutral-500 fixed top-0 left-0 right-0 bottom-0 -z-10 overflow-hidden transition-all h-0`} >
                 <ul className='w-full h-full flex flex-col justify-center items-center gap-y-8'>
                     <li><a className='text-white text-body-md hover:text-green-400 transition duration-300' href="/" onClick={() => setNavMobile(false)}>Home</a></li>
+                    <li><a className='text-white text-body-md hover:text-green-400 transition duration-300' href="#prices" onClick={() => setNavMobile(false)}>Online Training</a></li>
                     <li><a className='text-white text-body-md hover:text-green-400 transition duration-300' href="#shop" onClick={() => setNavMobile(false)}>Shop</a></li>
                     <li><a className='text-white text-body-md hover:text-green-400 transition duration-300' href="#community" onClick={() => setNavMobile(false)}>Community</a></li>
-                    <li><a className='text-white text-body-md hover:text-green-400 transition duration-300' href="#prices" onClick={() => setNavMobile(false)}>Prices</a></li>
                     <li><a className='text-white text-body-md hover:text-green-400 transition duration-300' href="#faqs" onClick={() => setNavMobile(false)}>FAQs</a></li>
                 </ul>
 

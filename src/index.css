@@ -29,7 +29,7 @@ html, body {
 body {
   margin: 0;
   padding: 0;
-  background-color: rgba(11, 11, 11, 0.9);
+  
   width: 100%;
 }
 
@@ -53,7 +53,7 @@ body {
 
 @layer base {
   body {
-    @apply font-secondary text-neutral-400 bg-[#e5e5e5];
+    @apply font-secondary text-neutral-400 bg-[#ffffff];
   }
 
   h1,
