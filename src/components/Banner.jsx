@@ -6,7 +6,7 @@ const Banner = () => {
     <section id='questionnaire-section' className=' bg-transparent h-[790px] w-full'>
       <div className='container mx-auto h-full'>
         <div className='flex items-center h-full relative '>
-          <div className='text-white max-w-[60%] xl:w-[70%]  z-10 pl-8 lg:pl-4 text-left'>
+          <div className='text-white max-w-[60%] xl:w-[70%] mt-10 sm:mt-30 md:mt-40  z-10 pl-8 lg:pl-4 text-left'>
             <h1
               className="md:text-[70px] text-3xl xl:text-center font-bold text-white mb-8 text-shadow"
               style={{ fontFamily: "'ITC Avant Garde Gothic', sans-serif" }}

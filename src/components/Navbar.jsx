@@ -27,7 +27,7 @@ const Navbar = () => {
     }, [navmobile]);
 
     return (
-        <header className={`${isActive ? 'bg-black py-[2px]' : 'bg-transparent py-[3px]'} fixed w-full z-30 left-0 right-0 mx-auto flex justify-between items-center px-[20px] lg:px-[80px] transition-all duration-300`}>
+        <header className={`${isActive ? 'bg-black py-[2px]' : 'bg-transparent py-[3px]'} fixed w-full z-30 left-0 right-0 mx-auto !mb-20 flex justify-between items-center px-[20px] lg:px-[80px] transition-all duration-300`}>
 
             <a href="" className='flex items-center flex-col gap-0 '>
                 {navmobile || isActive ?
@@ -38,11 +38,11 @@ const Navbar = () => {
             </a>
             <nav className='hidden lg:flex'>
                 <ul className='flex text-black xl:gap-x-24 gap-x-10  '>
-                    <li><a className={`text-body-md hover:text-green-600 font- transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="/" onClick={() => setNavMobile(false)}>Home</a></li>
-                    <li><a className={`text-body-md hover:text-green-600 font- transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="#prices" onClick={() => setNavMobile(false)}>Training Programs</a></li>
-                    <li><a className={`text-body-md hover:text-green-600 font- transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="#shop" onClick={() => setNavMobile(false)}>Shop</a></li>
-                    <li><a className={`text-body-md hover:text-green-600 font- transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="#socials" onClick={() => setNavMobile(false)}>Follow Me</a></li>
-                    <li><a className={`text-body-md hover:text-green-600 font- transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="#faqs" onClick={() => setNavMobile(false)}>FAQs</a></li>
+                    <li><a className={`text-body-md hover:text-green-600 font-semibold hover:scale-105 transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="/" onClick={() => setNavMobile(false)}>Home</a></li>
+                    <li><a className={`text-body-md hover:text-green-600 font-semibold hover:scale-105 transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="#prices" onClick={() => setNavMobile(false)}>Training Programs</a></li>
+                    <li><a className={`text-body-md hover:text-green-600 font-semibold hover:scale-105 transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="#shop" onClick={() => setNavMobile(false)}>Shop</a></li>
+                    <li><a className={`text-body-md hover:text-green-600 font-semibold hover:scale-105 transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="#socials" onClick={() => setNavMobile(false)}>Follow Me</a></li>
+                    <li><a className={`text-body-md hover:text-green-600 font-semibold hover:scale-105 transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="#faqs" onClick={() => setNavMobile(false)}>FAQs</a></li>
 
                 </ul>
             </nav>

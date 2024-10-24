@@ -11,6 +11,7 @@ import Banner from '../components/Banner';
 import TestimonialSection16 from '../components/Community';
 import Faqs4 from '../components/Faqs';
 import GetStarted from '../components/GetStarted';
+import ProductListSection4 from "../components/ProductList";
 
 // plans: [
 //   {
@@ -53,11 +54,13 @@ const Home = () => {
     <div className=''>
       {/* hero section */}
       <Banner />
- {/* testimonial */}
+      {/* testimonial */}
       {/* section-title-group max-w-[240px] px-4 lg:px-0 lg:ml-0 mx-auto */}
       <TestimonialSection16 />
+      {/* traing programs */}
+      <ProductListSection4 />
       {/* shop coming soon */}
-      {/* <ComingSoon1/> */}
+      
       <section className="py-40 bg-gray-200"> {/* Dark background for the section */}
         <div className="max-w-screen-xl mx-auto text-center">
           <div className='section-title-group max-w-[540px] mx-auto px-4 lg:px-0'>
@@ -75,7 +78,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-     
+
 
 
       {/* FAQs */}

@@ -64,7 +64,7 @@ const Questionnaire = () => {
   const [open, setOpen] = React.useState(false);
   const [showCongrats, setShowCongrats] = useState(false); // To toggle congratulations message
   const totalSteps = questions.length
-  const progressPercentage = ((currentStep+1)/totalSteps) *100
+  const progressPercentage = ((currentStep + 1) / totalSteps) * 100
   const handleOpen = () => setOpen(!open);
 
   const handleOptionClick = (option) => {
@@ -108,7 +108,7 @@ const Questionnaire = () => {
     });
   };
 
-  
+
 
 
   const handleNextClick = () => {
@@ -169,7 +169,7 @@ const Questionnaire = () => {
     // Show congratulations message
     console.log("Submitting answers:", answers);
     console.log("Contact details", contactDetails);
-    
+
 
     // Send answers and contact details to the API
     fetch('https://guzfit-backend.vercel.app/api/email/questionnare', { // Replace with your API endpoint
@@ -179,13 +179,13 @@ const Questionnaire = () => {
       },
       body: JSON.stringify({ answers, contactDetails }), // Send both answers and contact details
     })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Success:', data); // Handle success response
-    })
-    .catch((error) => {
-      console.error('Error:', error); // Handle error response
-    });
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data); // Handle success response
+      })
+      .catch((error) => {
+        console.error('Error:', error); // Handle error response
+      });
   };
 
   const handleShowCongrats = () => {
@@ -203,10 +203,10 @@ const Questionnaire = () => {
       question: q.question,
       answer: ''
     })));
-    
+
     // Optionally scroll to the top
     window.scrollTo(0, 0);
-    
+
     setShowCongrats(false); // Hide the congratulations message
     setOpen(false); // Close the dialog if it’s open
   };
@@ -215,28 +215,28 @@ const Questionnaire = () => {
     <div className={`w-full h-full flex flex-col ${showCongrats ? 'items-start' : ''} items-ce justify-center`}>
       {showCongrats ? (
         <div className="w-full flex flex-col items-start mt-20 text-justify animate-fadeIn transition-all duration-500 sm:w-[80%]">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-[50px] text-white uppercase font-bold mb-4 flex xs:flex-row flex-col items-center gap-2 mr-3">
-          <FaCheckCircle className="text-green-500 sm:text-6xl xs:text-5xl text-3xl mb-4" />
-          Congratulations!
-        </h2>
-        <p className="text-md sm:text-[20px] text-white mb-6 font-semibold">
-          We can&apos;t wait to start working with you! Please check your email for more details.
-        </p>
-        <p className="text-lg text-gray-300 font-semibold">
-          Keep exploring the other parts of our site and feel free to reach out for any assistance.
-        </p>
-        <Button
-          variant="outlined"
-          className="mt-6 text-white border-white hover:bg-white hover:text-black py-3 px-6 transition-all duration-300"
-          onClick={handleCongrats} // Option to scroll to the top
-        >
-          Submit another response
-        </Button>
-      </div>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-[50px] text-white uppercase font-bold mb-4 flex xs:flex-row flex-col items-center gap-2 mr-3">
+            <FaCheckCircle className="text-green-500 sm:text-6xl xs:text-5xl text-3xl mb-4" />
+            Congratulations!
+          </h2>
+          <p className="text-md sm:text-[20px] text-white mb-6 font-semibold">
+            We can&apos;t wait to start working with you! Please check your email for more details.
+          </p>
+          <p className="text-lg text-gray-300 font-semibold">
+            Keep exploring the other parts of our site and feel free to reach out for any assistance.
+          </p>
+          <Button
+            variant="outlined"
+            className="mt-6 text-white border-white hover:bg-white hover:text-black py-3 px-6 transition-all duration-300"
+            onClick={handleCongrats} // Option to scroll to the top
+          >
+            Submit another response
+          </Button>
+        </div>
       ) : (
         <>
-        <Progress value={progressPercentage} color="green"  />;
-      
+          <Progress value={progressPercentage} color="green" />;
+
 
           <div
             className={`transition-opacity duration-500 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
@@ -277,7 +277,7 @@ const Questionnaire = () => {
                   <div className="flex flex-col gap-4 text-black">
                     {questions[currentStep].options?.map((option, index) => (
                       <button
-                      style={{ fontFamily: "'ITC Avant Garde Gothic', sans-serif" }}
+                        style={{ fontFamily: "'ITC Avant Garde Gothic', sans-serif" }}
                         key={index}
                         onClick={() => handleOptionClick(option)}
                         className={`sm:px-8 sm:py-4 px-6 py-3  text-lg md:text-xl lg:text-2xl font-semibold rounded-md border border-black ${selectedOption === option ? 'bg-green-600' : 'bg-transparent'} hover:bg-green-600 transition-all duration-300`}
@@ -313,11 +313,13 @@ const Questionnaire = () => {
                 Thank You for Your Response!
               </DialogHeader>
               <DialogBody className="font-semibold">
+                Based on your answers, we’ve selected the perfect workout plans for
+                you! Click below to get started on your personalized fitness journey.
                 Our team will reach out to you shortly to assist with your fitness journey.
-                In the meantime, feel free to contact us at
+                {/* In the meantime, feel free to contact us at
                 <a href="mailto:gutzfitness@gmail.com" className="text-green-500"> gutzfitness@gmail.com </a>
                 or call us at
-                <a href="tel:+1234567890" className="text-green-500"> +1234567890</a>.
+                <a href="tel:+1234567890" className="text-green-500"> +1234567890</a>. */}
               </DialogBody>
               <DialogFooter className="flex flex-col sm:flex-row items-center justify-center gap-2">
                 <Button
@@ -334,7 +336,7 @@ const Questionnaire = () => {
                   className="bg-black/90 text-white hover:scale-105"
                   onClick={handleShowCongrats}
                 >
-                  <span>Register / Log In</span>
+                  <span>Get Your Plan Now</span>
                 </Button>
               </DialogFooter>
             </Dialog>

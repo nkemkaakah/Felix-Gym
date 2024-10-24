@@ -7,6 +7,9 @@ import Coaching from './pages/Coaching'
 import Shop from './pages/Shop'
 import Aos from 'aos'
 import 'aos/dist/aos.css';
+import TrainingPrograms from './pages/TrainingPrograms'
+import EachTrainingProgram from './pages/EachTrainingProgram'
+import UserProfile from './pages/UserProfile'
 
 const App = () => {
 
@@ -22,6 +25,9 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/coaching" element={<Coaching />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/training-programs" element={<TrainingPrograms />} />
+          <Route path="/training-programs:id" element={<EachTrainingProgram />} />
+          <Route path="/profile:id" element={<UserProfile />} />
         </Routes>
       
       <Footer />

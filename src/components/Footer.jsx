@@ -4,7 +4,7 @@ import black_logo from '../assets/Gutzfit logo.png';
 import FadeInSection from "./FadeInSection";
 const Footer = () => {
     return (
-        <>
+        <div>
             <FadeInSection>
                 <footer className="w-full bg-transparent p-8">
                     <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 bg-transparent text-center md:justify-between">
@@ -65,7 +65,7 @@ const Footer = () => {
                     </Typography>
                 </div>
             </FadeInSection>
-        </>
+        </div>
     );
 };
 
