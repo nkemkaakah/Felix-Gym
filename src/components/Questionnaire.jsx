@@ -5,39 +5,67 @@ import {
   DialogHeader,
   DialogBody,
   DialogFooter,
-  Progress
+  Progress,
+  List,
+  ListItem,
+  ListItemPrefix,
+  Avatar,
+  Card,
+  Typography,
 } from "@material-tailwind/react";
 
 import { FaCheckCircle } from "react-icons/fa";
 import React, { useEffect, useState } from 'react';
+import { Programs } from "../assets/contents";
 
 const questions = [
   {
     question: 'What is your main fitness goal?',
+
     options: [
-      'Lose weight/Tone up',
-      'Build muscle',
-      'Improve endurance/cardio',
-      'Increase strength'
+      { label: 'Lose weight/Tone up', id: ['m9R1Xv5L4Kc2Y7N8W3J0'] },
+      { label: 'Build muscle', id: ['a9dB12fXcH7J3gT6L9Q4'] },
+      { label: 'Improve endurance/cardio', id: ['t6Yk3Pz2bF5D8Jw1V4H7', 'z4Xy8VwN2Pq7H1R5m6K9'] },
+      { label: 'Increase strength', id: ['z4Xy8VwN2Pq7H1R5m6K9', 'a9dB12fXcH7J3gT6L9Q4'] }
     ],
-    type: 'options'
+    type: 'linked-options' // A custom type to include links if needed
   },
-  { question: 'I am', options: ['Male', 'Female'], type: 'options' },
-  { question: 'I am', options: ['Under 18', '18-30', '30-45', '45+'], type: 'options' },
+  {
+    question: 'I am', options: [
+      { label: 'Male' },
+      { label: 'Female' }
+    ], type: 'options'
+  },
+
+  { question: 'I am', options: [{ label: 'Under 18' }, { label: '18-30' }, { label: '30-45' }, { label: '45+' }], type: 'options' },
 
   {
     question: 'How would you describe your current fitness level?',
-    options: ['Beginner (just starting out)', 'Intermediate (some experience, but inconsistent)', 'Advanced (regular, consistent training)'],
+    options: [
+      { label: 'Beginner (just starting out)' },
+      { label: 'Intermediate (some experience, but inconsistent)' },
+      { label: 'Advanced (regular, consistent training)' }
+    ],
     type: 'options'
   },
   {
     question: 'Do you have access to workout equipment?',
     options: [
-      'Yes, I have weights/resistance bands, etc.',
-      'No, I prefer bodyweight workouts',
-      'I only have minimal equipment'
+      { label: 'Yes, I have weights/resistance bands, etc.' },
+      { label: 'No, I prefer bodyweight workouts' },
+      { label: 'I only have minimal equipment' }
     ],
     type: 'options'
+  },
+  {
+    question: 'What type of workout do you prefer?',
+    description: 'Pick the format that excites you the most',
+    options: [
+      { label: 'Bodyweight exercises (no equipment needed)', id: ['z4Xy8VwN2Pq7H1R5m6K9'] },
+      { label: 'Strength training (weights or resistance)', id: ['a9dB12fXcH7J3gT6L9Q4'] },
+      { label: 'Cardio workouts', id: ['t6Yk3Pz2bF5D8Jw1V4H7'] }
+    ],
+    type: 'linked-options' // A custom type to include links
   },
   { question: 'Contact Info', type: 'form' }
 ];
@@ -49,6 +77,8 @@ const Questionnaire = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [contactDetails, setContactDetails] = useState({ name: '', email: '', phone: '' });
   const [optionTimeout, setOptionTimeout] = useState(null); // For
+  const [selectedPrograms, setSelectedPrograms] = useState([]);
+
 
   const [answers, setAnswers] = useState(
     questions.map((q) => ({
@@ -70,13 +100,13 @@ const Questionnaire = () => {
   const handleOptionClick = (option) => {
     if (isTransitioning) return; // Prevent further execution if transitioning
 
-    setSelectedOption(option);
+    setSelectedOption(option.label);
     setIsTransitioning(true); // Start the transition
 
     // Store the answer for the current question
     setAnswers((prevAnswers) => {
       const updatedAnswers = [...prevAnswers];
-      updatedAnswers[currentStep] = { ...updatedAnswers[currentStep], answer: option }; // Store both the question and answer
+      updatedAnswers[currentStep] = { ...updatedAnswers[currentStep], answer: option.label }; // Store both the question and answer
       return updatedAnswers;
     });
 
@@ -170,6 +200,18 @@ const Questionnaire = () => {
     console.log("Submitting answers:", answers);
     console.log("Contact details", contactDetails);
 
+    //add neccesary programs
+    // Extract IDs from selected answers
+    const selectedIds = answers
+      .filter(answer => answer.answer && questions[answers.indexOf(answer)].options.some(option => option.label === answer.answer && option.id))
+      .flatMap(answer => questions[answers.indexOf(answer)].options.filter(option => option.label === answer.answer).flatMap(option => option.id));
+
+
+    const programsToSelect = Programs.filter(program => selectedIds.includes(program.id));
+
+    setSelectedPrograms(programsToSelect);
+    // Log the selected programs for debugging
+    console.log("Selected Programs:", selectedPrograms, programsToSelect);
 
     // Send answers and contact details to the API
     fetch('https://guzfit-backend.vercel.app/api/email/questionnare', { // Replace with your API endpoint
@@ -177,7 +219,7 @@ const Questionnaire = () => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ answers, contactDetails }), // Send both answers and contact details
+      body: JSON.stringify({ answers, contactDetails, selectedPrograms,programsToSelect }), // Send both answers and contact details
     })
       .then(response => response.json())
       .then(data => {
@@ -282,7 +324,7 @@ const Questionnaire = () => {
                         onClick={() => handleOptionClick(option)}
                         className={`sm:px-8 sm:py-4 px-6 py-3  text-lg md:text-xl lg:text-2xl font-semibold rounded-md border border-black ${selectedOption === option ? 'bg-green-600' : 'bg-transparent'} hover:bg-green-600 transition-all duration-300`}
                       >
-                        {option}
+                        {option.label}
                       </button>
                     ))}
                   </div>
@@ -320,6 +362,34 @@ const Questionnaire = () => {
                 <a href="mailto:gutzfitness@gmail.com" className="text-green-500"> gutzfitness@gmail.com </a>
                 or call us at
                 <a href="tel:+1234567890" className="text-green-500"> +1234567890</a>. */}
+              </DialogBody>
+              <DialogBody className="font-semibold">
+                <Typography color="black" className="font-semibold text-lg">
+                  Recommended Plans based for you:
+                </Typography>
+                <Card className="w-96">
+                  <List>
+                    {selectedPrograms.map((program) => (
+                      <ListItem key={program.id}>
+                        <ListItemPrefix>
+                          <Avatar
+                            variant="circular"
+                            alt={program.name}
+                            src={program.img}
+                          />
+                        </ListItemPrefix>
+                        <div>
+                          <Typography variant="h6" color="blue-gray">
+                            {program.name}
+                          </Typography>
+                          <Typography variant="small" color="gray" className="font-normal">
+                            Price: {program.price}
+                          </Typography>
+                        </div>
+                      </ListItem>
+                    ))}
+                  </List>
+                </Card>
               </DialogBody>
               <DialogFooter className="flex flex-col sm:flex-row items-center justify-center gap-2">
                 <Button

@@ -6,12 +6,8 @@ import {
     CardFooter,
     Typography,
 } from "@material-tailwind/react";
+import { Programs } from "../assets/contents";
 
-import outdoorimg from "../assets/shared6.jpg"
-import blastimg from "../assets/IMG_1064.JPG"
-import metconimg from "../assets/IMG_0997.JPG"
-import shredimg from "../assets/IMG_2136.jpg"
-import oneimg from "../assets/IMG_0559.JPG"
 
 
 export function ProductListCard({
@@ -44,38 +40,38 @@ export function ProductListCard({
         </Card>
     );
 }
-const CONTENTS = [
-    {
-        id: "a1b2c3",
-        img: blastimg, // Use imported image
-        name: "Gutzfit Muscle Blast",
-        price: "£££"
-    },
-    {
-        id: "d4e5f6",
-        img: outdoorimg, // Use imported image
-        name: "Gutzfit Outdoor Beast",
-        price: "£££"
-    },
-    {
-        id: "g7h8i9",
-        img: metconimg, // Use imported image
-        name: "Gutzfit METCON",
-        price: "£££"
-    },
-    {
-        id: "j10k11l",
-        img: shredimg, // Use imported image
-        name: "Gutzfit Shred",
-        price: "£££"
-    },
-    {
-        id: "m13n14o",
-        img: oneimg, // Use imported image
-        name: "Gutzfit Tone Up",
-        price: "£££"
-    },
-];
+// export const CONTENTS = [
+//     {
+//         id: "a1b2c3",
+//         img: blastimg, // Use imported image
+//         name: "Gutzfit Muscle Blast",
+//         price: "£££"
+//     },
+//     {
+//         id: "d4e5f6",
+//         img: outdoorimg, // Use imported image
+//         name: "Gutzfit Outdoor Beast",
+//         price: "£££"
+//     },
+//     {
+//         id: "g7h8i9",
+//         img: metconimg, // Use imported image
+//         name: "Gutzfit METCON",
+//         price: "£££"
+//     },
+//     {
+//         id: "j10k11l",
+//         img: shredimg, // Use imported image
+//         name: "Gutzfit Shred",
+//         price: "£££"
+//     },
+//     {
+//         id: "m13n14o",
+//         img: oneimg, // Use imported image
+//         name: "Gutzfit Tone Up",
+//         price: "£££"
+//     },
+// ];
 
 export function ProductListSection4() {
     return (
@@ -94,7 +90,7 @@ export function ProductListSection4() {
             </div>
             <div className="mx-auto container">
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 md:grid-cols-2">
-                    {CONTENTS.slice(0, 3).map(({ img, name, price }, index) => (
+                    {Programs.slice(0, 3).map(({ img, name, price }, index) => (
                         <ProductListCard
                             key={index}
                             img={img}
