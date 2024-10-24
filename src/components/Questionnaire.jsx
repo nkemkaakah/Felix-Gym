@@ -345,10 +345,12 @@ const Questionnaire = () => {
             <Dialog
               open={open}
               handler={handleOpen}
+              onClose={handleShowCongrats}
               animate={{
                 mount: { scale: 1, y: 0 },
                 unmount: { scale: 0.9, y: -100 },
               }}
+             
               className="flex flex-col items-center justify-center text-center" // Center the content inside the dialog
             >
               <DialogHeader className="font-bold text-[30px] md:text-[40px]">
