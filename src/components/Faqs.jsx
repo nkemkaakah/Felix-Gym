@@ -4,30 +4,27 @@ import { useEffect, useRef, useState } from "react";
 
 const faqs = [
     {
-        title: "What kind of training programs do you offer at Guzfit?",
-        desc: "Guzfit offers a wide range of training programs, including strength training, HIIT, personal coaching, and group fitness classes. Whether you're a beginner or a seasoned athlete, we have something for you.",
+        title: "WILL MY PROGRAM BE DESIGNED BY GUTZFIT HIMSELF?",
+        desc: "Yes! Every workout program is designed by Gutzfit himself, ensuring that each routine follows his proven methods and approach to fitness. While some aspects of the programs are tailored based on your personal goals and fitness level, the core structure and exercises are all directly influenced by Gutzfit’s extensive experience and expertise.",
     },
     {
-        title: "Can I book personal training sessions at Guzfit?",
-        desc: "Yes, at Guzfit, we offer one-on-one personal coaching tailored to your fitness goals. You can easily book sessions with our expert trainers through our website or at the gym.",
+        title: "WHAT IS GUTZFIT'S STYLE OF TRAINING?",
+        desc: "Gutzfit's style of training is a dynamic blend of strength training, high-intensity interval training (HIIT), and functional movements (Hybrid). His approach focuses on building lean muscle, burning fat, and improving overall endurance and agility. Whether you want to get stronger, leaner, or more athletic, Gutzfit programs are designed to push your limits and help you achieve sustainable results. His workouts emphasize efficiency, using effective exercises to maximize time and effort.",
     },
     {
-        title: "What equipment does Guzfit provide?",
-        desc: "Our state-of-the-art gym is equipped with the latest machines and tools for cardio, weightlifting, and functional training. From treadmills to free weights, we've got everything you need for a great workout.",
+        title: "DO YOU HAVE MEAL PLANS?",
+        desc: "Not yet! But we plan to offer them in the future. Nutrition is a key part of any fitness journey, and our meal plans will be designed to complement your training and fitness goals. Whether you're looking to lose weight, gain muscle, or simply eat healthier, our meal plans will be easy to follow and packed with nutritious, balanced meals. We will take into account your dietary preferences and nutritional needs to help fuel your body and optimize your results.",
     },
     {
-        title: "Are there any membership plans at Guzfit?",
-        desc: "Yes, Guzfit offers flexible membership plans to suit your needs. We have monthly, quarterly, and yearly plans, along with exclusive benefits for long-term members.",
+        title: "ARE GUTZFIT PROGRAMS JUST FOR BODYBUILDERS?",
+        desc: "Not at all! Gutzfit programs are designed for anyone who wants to improve their fitness, regardless of their goals. Whether you're aiming to lose weight, build muscle, enhance endurance, or just stay active and healthy, we have a program for you. While some programs can help with muscle building, others are focused on fat loss, functional fitness, or general health. These workouts are suitable for all fitness levels—from beginners to advanced athletes.",
     },
     {
-        title: "Do you offer nutrition guidance at Guzfit?",
-        desc: "At Guzfit, we believe fitness is holistic. We offer nutrition plans and guidance to complement your workout routine and help you achieve your fitness goals faster.",
-    },
-    {
-        title: "What are Guzfit's operating hours?",
-        desc: "Guzfit is open 24/7 to ensure you have access to our facilities whenever you need. Our staff is available for assistance during peak hours from 6 AM to 10 PM.",
+        title: "HOW SOON CAN I EXPECT TO SEE RESULTS?",
+        desc: "Results depend on several factors, including your starting point, consistency, and commitment to both your workouts and nutrition plan. That being said, many clients start noticing positive changes within the first 2–4 weeks of following the program consistently. For longer-term, more visible results, like muscle growth or significant fat loss, it typically takes around 8–12 weeks. Remember, the key to lasting success is consistency and staying committed to your goals!",
     }
 ];
+
 
 
 export function Faqs4() {
@@ -82,7 +79,7 @@ export function Faqs4() {
                     </Typography>
                     <Button
                         ripple={true}
-                        className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-white hover:text-black focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 text-[50px]  font-bold uppercase text-white transition-all !duration-300"
+                        className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-white hover:text-black focus:ring-4 focus:outline-none focus:ring-green-600 dark:focus:ring-green-800 shadow-lg shadow-green-600/50 dark:shadow-lg dark:shadow-green-800/80 text-[50px]  font-bold uppercase text-white transition-all !duration-300"
                         onClick={() => {
                             const section = document.querySelector("#questionnaire-section");
                             section.scrollIntoView({ behavior: "smooth" });
@@ -99,7 +96,7 @@ export function Faqs4() {
                             <div className="flex justify-between items-center pb-6">
                                 <Typography
                                     color="black"
-                                    className={`text-[20px] font-bold uppercase transition-shadow duration-300 ${openIndex === index ? "bg-gradient-to-r from-green-400 via-green-500 to-green-600  shadow-lg shadow-green-500/50" : ""}`}
+                                    className={`text-[20px] font-bold uppercase transition-shadow duration-300 ${openIndex === index ? "bg-gradient-to-r from-green-400 via-green-500 to-green-600  shadow-lg shadow-green-600/50" : ""}`}
                                 >
                                     {title}
                                 </Typography>
@@ -115,7 +112,7 @@ export function Faqs4() {
                                 className={`overflow-hidden transition-all duration-300 ease-in-out border-t border-gray-600 pt-4 ${openIndex === index ? "max-h-[200px]" : "max-h-0"
                                     }`}
                             >
-                                <Typography className="font-normal !text-black-300">
+                                <Typography className="font-semibold !text-black-300">
                                     {desc}
                                 </Typography>
                             </div>

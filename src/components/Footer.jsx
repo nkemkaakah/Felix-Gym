@@ -20,7 +20,7 @@ const Footer = () => {
                             </Typography>
                         </div>
                     </div>
-                    <div className="mt-0 flex w-full flex-col items-center justify-center  border-blue-gray-50 py-4 md:flex-row md:justify-between">
+                    <div className="mt-0 flex w-full flex-col items-center justify-center  border-blue-gray-50 py-4 md:flex-row md:justify-between" id='socials'>
                         <div className="flex gap-8 text-blue-gray-900 sm:justify-center">
                             {/* Facebook */}
                             <Typography as="a" href="https://www.tiktok.com/@gutzfit0?_t=8qD42GWaOci&_r=1" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 opacity-80 transition-opacity hover:opacity-100">

@@ -1,23 +1,44 @@
+/* eslint-disable no-unused-vars */
 import {
   Button,
   Dialog,
   DialogHeader,
   DialogBody,
   DialogFooter,
+  Progress
 } from "@material-tailwind/react";
+
 import { FaCheckCircle } from "react-icons/fa";
 import React, { useEffect, useState } from 'react';
 
 const questions = [
-  { question: 'What is your fitness goal?', options: ['Weight Loss', 'Muscle Gain', 'Improve Health and Longevity'], type: 'options' },
+  {
+    question: 'What is your main fitness goal?',
+    options: [
+      'Lose weight/Tone up',
+      'Build muscle',
+      'Improve endurance/cardio',
+      'Increase strength'
+    ],
+    type: 'options'
+  },
   { question: 'I am', options: ['Male', 'Female'], type: 'options' },
   { question: 'I am', options: ['Under 18', '18-30', '30-45', '45+'], type: 'options' },
-  { question: 'Preferred training style?', options: ['Cardio', 'Strength', 'Mixed'], type: 'options' },
-  { question: 'Do you need personal coaching?', options: ['Yes', 'No'], type: 'options' },
-  { question: 'Please describe your current workout routine', type: 'textarea' }, // Textarea question
-  { question: 'Are you comfortable with group classes?', options: ['Yes', 'No'], type: 'options' },
-  { question: 'Preferred workout time?', options: ['Morning', 'Afternoon', 'Evening'], type: 'options' },
 
+  {
+    question: 'How would you describe your current fitness level?',
+    options: ['Beginner (just starting out)', 'Intermediate (some experience, but inconsistent)', 'Advanced (regular, consistent training)'],
+    type: 'options'
+  },
+  {
+    question: 'Do you have access to workout equipment?',
+    options: [
+      'Yes, I have weights/resistance bands, etc.',
+      'No, I prefer bodyweight workouts',
+      'I only have minimal equipment'
+    ],
+    type: 'options'
+  },
   { question: 'Contact Info', type: 'form' }
 ];
 
@@ -42,7 +63,8 @@ const Questionnaire = () => {
 
   const [open, setOpen] = React.useState(false);
   const [showCongrats, setShowCongrats] = useState(false); // To toggle congratulations message
-
+  const totalSteps = questions.length
+  const progressPercentage = ((currentStep+1)/totalSteps) *100
   const handleOpen = () => setOpen(!open);
 
   const handleOptionClick = (option) => {
@@ -213,6 +235,9 @@ const Questionnaire = () => {
       </div>
       ) : (
         <>
+        <Progress value={progressPercentage} color="green"  />;
+      
+
           <div
             className={`transition-opacity duration-500 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
           >
@@ -247,14 +272,15 @@ const Questionnaire = () => {
 
             ) : (
               <>
-                <h2 className="md:text-3xl text-2xl xl:text-center lg:text-5xl text-black font-bold mb-6">{questions[currentStep].question}</h2>
+                <h2 style={{ fontFamily: "'ITC Avant Garde Gothic', sans-serif" }} className="md:text-3xl text-2xl xl:text-center lg:text-5xl text-black font-bold mb-6">{questions[currentStep].question}</h2>
                 {!isTextareaQuestion ? (
                   <div className="flex flex-col gap-4 text-black">
                     {questions[currentStep].options?.map((option, index) => (
                       <button
+                      style={{ fontFamily: "'ITC Avant Garde Gothic', sans-serif" }}
                         key={index}
                         onClick={() => handleOptionClick(option)}
-                        className={`sm:px-8 sm:py-4 px-6 py-3  text-lg md:text-xl lg:text-2xl font-semibold rounded-md border border-black ${selectedOption === option ? 'bg-green-500' : 'bg-transparent'} hover:bg-green-300 transition-all duration-300`}
+                        className={`sm:px-8 sm:py-4 px-6 py-3  text-lg md:text-xl lg:text-2xl font-semibold rounded-md border border-black ${selectedOption === option ? 'bg-green-600' : 'bg-transparent'} hover:bg-green-600 transition-all duration-300`}
                       >
                         {option}
                       </button>

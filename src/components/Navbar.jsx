@@ -35,15 +35,14 @@ const Navbar = () => {
                     (<img src={black_logo} alt="" className=" h-[120px] hover:scale-105 transition-all duration-300" />)
                 }
                 {/* <h1 className='text-white text-4xl'>Felix Gym</h1> */}
-                <p className={`${!navmobile ? "text-black" : "text-white"} text-sm md:text-md hidden xs:block`}>No Gutz, No Glory</p>
             </a>
             <nav className='hidden lg:flex'>
-                <ul className='flex text-black xl:gap-x-24 gap-x-10 '>
-                    <li><a className={`text-body-md hover:text-green-400 transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="/" onClick={() => setNavMobile(false)}>Home</a></li>
-                    <li><a className={`text-body-md hover:text-green-400 transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="#prices" onClick={() => setNavMobile(false)}>Online Training</a></li>
-                    <li><a className={`text-body-md hover:text-green-400 transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="#shop" onClick={() => setNavMobile(false)}>Shop</a></li>
-                    <li><a className={`text-body-md hover:text-green-400 transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="#community" onClick={() => setNavMobile(false)}>Community</a></li>
-                    <li><a className={`text-body-md hover:text-green-400 transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="#faqs" onClick={() => setNavMobile(false)}>FAQs</a></li>
+                <ul className='flex text-black xl:gap-x-24 gap-x-10  '>
+                    <li><a className={`text-body-md hover:text-green-600 font- transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="/" onClick={() => setNavMobile(false)}>Home</a></li>
+                    <li><a className={`text-body-md hover:text-green-600 font- transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="#prices" onClick={() => setNavMobile(false)}>Training Programs</a></li>
+                    <li><a className={`text-body-md hover:text-green-600 font- transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="#shop" onClick={() => setNavMobile(false)}>Shop</a></li>
+                    <li><a className={`text-body-md hover:text-green-600 font- transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="#socials" onClick={() => setNavMobile(false)}>Follow Me</a></li>
+                    <li><a className={`text-body-md hover:text-green-600 font- transition duration-300 ${isActive ? 'text-white' : 'text-black'}`} href="#faqs" onClick={() => setNavMobile(false)}>FAQs</a></li>
 
                 </ul>
             </nav>
@@ -54,17 +53,17 @@ const Navbar = () => {
             <div onClick={() => setNavMobile(!navmobile)} className='lg:hidden absolute right-4 top-6'>
                 {navmobile ? (<RiCloseFill className='text-primary-200 text-3xl cursor-pointer' />) :
                     (
-                        <RiMenu4Fill className={`${isActive ? 'text-white' : "text-black"} text-3xl cursor-pointer`} />
+                        <RiMenu4Fill className={`${isActive ? 'text-white' : "text-black"} text-3xl border s:border-none cursor-pointer  rounded`} />
                     )
                 }
             </div>
             <nav className={`${navmobile ? 'h-screen' : 'h-0'} lg:hidden w-full bg-neutral-500 fixed top-0 left-0 right-0 bottom-0 -z-10 overflow-hidden transition-all h-0`} >
-                <ul className='w-full h-full flex flex-col justify-center items-center gap-y-8'>
-                    <li><a className='text-white text-body-md hover:text-green-400 transition duration-300' href="/" onClick={() => setNavMobile(false)}>Home</a></li>
-                    <li><a className='text-white text-body-md hover:text-green-400 transition duration-300' href="#prices" onClick={() => setNavMobile(false)}>Online Training</a></li>
-                    <li><a className='text-white text-body-md hover:text-green-400 transition duration-300' href="#shop" onClick={() => setNavMobile(false)}>Shop</a></li>
-                    <li><a className='text-white text-body-md hover:text-green-400 transition duration-300' href="#community" onClick={() => setNavMobile(false)}>Community</a></li>
-                    <li><a className='text-white text-body-md hover:text-green-400 transition duration-300' href="#faqs" onClick={() => setNavMobile(false)}>FAQs</a></li>
+                <ul className='w-full h-full flex flex-col justify-center items-center gap-y-8 font-semibold'>
+                    <li><a className='text-white text-body-md hover:text-green-600 transition duration-300' href="/" onClick={() => setNavMobile(false)}>Home</a></li>
+                    <li><a className='text-white text-body-md hover:text-green-600 transition duration-300' href="#prices" onClick={() => setNavMobile(false)}>Training Programs</a></li>
+                    <li><a className='text-white text-body-md hover:text-green-600 transition duration-300' href="#shop" onClick={() => setNavMobile(false)}>Shop</a></li>
+                    <li><a className='text-white text-body-md hover:text-green-600 transition duration-300' href="#socials" onClick={() => setNavMobile(false)}>Follow Me</a></li>
+                    <li><a className='text-white text-body-md hover:text-green-600 transition duration-300' href="#faqs" onClick={() => setNavMobile(false)}>FAQs</a></li>
                 </ul>
 
                 <div className='-mt-44 flex justify-center gap-x-8'>

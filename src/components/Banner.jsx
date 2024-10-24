@@ -7,9 +7,20 @@ const Banner = () => {
       <div className='container mx-auto h-full'>
         <div className='flex items-center h-full relative '>
           <div className='text-white max-w-[60%] xl:w-[70%]  z-10 pl-8 lg:pl-4 text-left'>
-            <h1 className=' md:text-[70px] text-3xl xl:text-center  font-bold text-white mb-8 text-shadow' data-aos='fade-down' data-aos-delay='500'>
-             <span className='uppercase text-black text-shadow'>Gutzfit </span>
+            <h1
+              className="md:text-[70px] text-3xl xl:text-center font-bold text-white mb-8 text-shadow"
+              style={{ fontFamily: "'ITC Avant Garde Gothic', sans-serif" }}
+              data-aos="fade-down"
+              data-aos-delay="500"
+            >
+              <span className="uppercase text-black text-shadow">Gutzfit</span>
             </h1>
+            <p
+              className="text-black text-md md:text-lg font-semibold hidden xs:block my-3"
+              style={{ fontFamily: "'ITC Avant Garde Gothic', sans-serif" }}
+            >
+              No Gutz, No Glory
+            </p>
             {/* <p className='max-w-[415px] text-body-md lg:text-body-lg mb-8 ml-8' data-aos='fade-down' data-aos-delay='600'>
               We provide serious fitness but within a fun and friendly, safe space
             </p> */}
