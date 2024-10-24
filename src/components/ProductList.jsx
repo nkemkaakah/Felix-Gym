@@ -39,39 +39,42 @@ export function ProductListCard({
                 </div>
             </CardBody>
             <CardFooter className="pt-0">
-                <Button className="hover:scale-105 transition-all duration-200 hover:bg-black/75">Get Plan Now</Button>
+                <Button className="text-lg hover:scale-105 transition-all duration-200 hover:bg-black/75">Get Plan Now</Button>
             </CardFooter>
         </Card>
     );
 }
-
 const CONTENTS = [
     {
+        id: "a1b2c3",
         img: blastimg, // Use imported image
         name: "Gutzfit Muscle Blast",
         price: "£££"
     },
     {
+        id: "d4e5f6",
         img: outdoorimg, // Use imported image
         name: "Gutzfit Outdoor Beast",
         price: "£££"
     },
     {
+        id: "g7h8i9",
         img: metconimg, // Use imported image
         name: "Gutzfit METCON",
         price: "£££"
     },
     {
+        id: "j10k11l",
         img: shredimg, // Use imported image
         name: "Gutzfit Shred",
         price: "£££"
     },
     {
+        id: "m13n14o",
         img: oneimg, // Use imported image
         name: "Gutzfit Tone Up",
         price: "£££"
     },
-
 ];
 
 export function ProductListSection4() {

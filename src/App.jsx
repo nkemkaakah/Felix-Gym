@@ -1,4 +1,3 @@
-import React from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { Route, Routes } from 'react-router-dom'
@@ -14,13 +13,14 @@ import UserProfile from './pages/UserProfile'
 const App = () => {
 
   Aos.init({
-    duration:2500,
-    delay:400
+    duration: 2500,
+    delay: 400
   })
   return (
-    <div className="app">
+    <div className="app min-h-screen flex flex-col">
       <Navbar />
-      
+
+      <div className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/coaching" element={<Coaching />} />
@@ -29,10 +29,11 @@ const App = () => {
           <Route path="/training-programs:id" element={<EachTrainingProgram />} />
           <Route path="/profile:id" element={<UserProfile />} />
         </Routes>
-      
+      </div>
+
       <Footer />
-     
     </div>
+
   )
 }
 

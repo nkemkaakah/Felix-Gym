@@ -215,19 +215,19 @@ const Questionnaire = () => {
     <div className={`w-full h-full flex flex-col ${showCongrats ? 'items-start' : ''} items-ce justify-center`}>
       {showCongrats ? (
         <div className="w-full flex flex-col items-start mt-20 text-justify animate-fadeIn transition-all duration-500 sm:w-[80%]">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-[50px] text-white uppercase font-bold mb-4 flex xs:flex-row flex-col items-center gap-2 mr-3">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-[50px] text-black uppercase font-bold mb-4 flex xs:flex-row flex-col items-center gap-2 mr-3">
             <FaCheckCircle className="text-green-500 sm:text-6xl xs:text-5xl text-3xl mb-4" />
             Congratulations!
           </h2>
-          <p className="text-md sm:text-[20px] text-white mb-6 font-semibold">
+          <p className="text-md sm:text-[20px] text-black mb-6 font-semibold">
             We can&apos;t wait to start working with you! Please check your email for more details.
           </p>
-          <p className="text-lg text-gray-300 font-semibold">
+          <p className="text-lg text-black/60 font-semibold">
             Keep exploring the other parts of our site and feel free to reach out for any assistance.
           </p>
           <Button
             variant="outlined"
-            className="mt-6 text-white border-white hover:bg-white hover:text-black py-3 px-6 transition-all duration-300"
+            className="mt-6 text-black border-black hover:bg-black hover:text-white hover:scale-105 py-3 px-6 transition-all duration-300"
             onClick={handleCongrats} // Option to scroll to the top
           >
             Submit another response

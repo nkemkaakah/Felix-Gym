@@ -13,14 +13,7 @@
   box-sizing: border-box;
 }
 
-.app {
-  flex: 1;
 
-}
-
-.app>* {
-  flex: 1;
-}
 html {
   scroll-behavior: smooth;
 }
