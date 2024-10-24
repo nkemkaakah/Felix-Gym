@@ -1,7 +1,7 @@
 import { Typography } from "@material-tailwind/react";
-i
+
+import black_logo from '../assets/Gutzfit logo.png';
 import FadeInSection from "./FadeInSection";
-import black_logo from '../assets/Gutzfit logo.png'
 const Footer = () => {
     return (
         <>
