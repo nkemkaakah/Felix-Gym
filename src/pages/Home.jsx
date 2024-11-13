@@ -4,10 +4,10 @@ import {
   CardBody,
   Typography
 } from "@material-tailwind/react";
+import banner1 from '../assets/IMG_0518.jpg'
 
 import videoBg from '../assets/Copy of GUTZFIT YOUTUBE .mp4';
-import pricing_icon from '../assets/pricing.svg';
-import Banner from '../components/Banner';
+import { CarouselWithOverlay } from '../components/Banner';
 import TestimonialSection16 from '../components/Community';
 import Faqs4 from '../components/Faqs';
 import GetStarted from '../components/GetStarted';
@@ -53,56 +53,33 @@ const Home = () => {
   return (
     <div className=''>
       {/* hero section */}
-      <Banner />
+      
+      {/* <Banner /> */}
+      <CarouselWithOverlay />
+       {/* traing programs */}
+       <ProductListSection4 />
       {/* testimonial */}
       {/* section-title-group max-w-[240px] px-4 lg:px-0 lg:ml-0 mx-auto */}
       <TestimonialSection16 />
-      {/* traing programs */}
-      <ProductListSection4 />
+     
       {/* shop coming soon */}
-      
-      <section className="py-40 bg-gray-200"> {/* Dark background for the section */}
-        <div className="max-w-screen-xl mx-auto text-center">
-          <div className='section-title-group max-w-[540px] mx-auto px-4 lg:px-0'>
-            <img src={pricing_icon} alt="" />
-            <h2 className='h2'>Shop Coming Soon <span className='text-primary-200'>!</span></h2>
-          </div>
 
-          <div className="flex justify-center">
-            <div className="relative inline-block">
-              <div className="absolute inset-0 bg-green-200 rounded-lg opacity-50 animate__animated animate__pulse animate__infinite"></div>
-              <button className="relative z-10 bgtransparent-    px-12 py-5 !bg-primary-200 text-blue-gray-900 shadow-lg transition-all duration-500 ease-in-out transform  hover:text-white hover:!bg-black/90 hover:scale-105">
-                Notify Me
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-      {/* FAQs */}
-      <Faqs4 />
-      {/* leanr from a pro section w video */}
-      <section className="relative w-full h-screen overflow-hidden">
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          autoPlay
-          loop
-          muted
-          src={videoBg} // Replace with your video path
-          type="video/mp4"
-        />
-        <div className="relative z-10 flex flex-col items-start justify-center w-full h-full bg-black bg-opacity-50 p-8"> {/* Optional semi-transparent background */}
+       {/* leanr from a pro section w video */}
+       <section className="relative w-full h-screen overflow-hidden">
+        <div className="relative z-10 flex flex-col items-start justify-center w-full h-full" style={{ backgroundImage: `url(${banner1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          {/* Optional semi-transparent background removed */}
           <Card className="mt-6 w-full sm:w-[80%] md:w-[60%] xl:w-[40%] xl:h-[40%]  ">
             <CardBody className='h-full'>
               <Typography variant="h5" color="blue-gray" className="mb-10 uppercase text-4xl font-extrabold xl:!mt-10 xl:text-[50px] ">
-                Learn from a Pro
+                Train the Gutzfit Way
               </Typography>
               <Typography className='text-lg mb-10 font-semibold xl:text-[25px] '>
-                Embarking on a fitness journey is a transformative experience! With passion and dedication,
-                I am here to inspire and support you in achieving your health and fitness goals. Join me
-                as we unlock your potential and work towards a stronger, healthier you. Start your journey today
+                Are you ready to unlock a fitness approach that goes beyond the gym?
+                With over a decade of experience, the Gutzfit Method isn’t just about workouts – it’s about developing strength, resilience, and confidence that lasts.
+                My hybrid training style is designed to push you to your limits and show you how to work smart, not just hard.
+                Join a growing community of people who have found the courage, guts, and drive to reach their best shape and stay there!
+                Transform the way you train, the way you eat, and the way you live. Your fitness journey starts now – discover the Gutzfit Method and make the change today!
+
               </Typography>
               <Button
                 ripple={true}
@@ -113,14 +90,30 @@ const Home = () => {
                 }}
 
               >
-                Start Now!
+                Find Your Program Now!
               </Button>
             </CardBody>
           </Card>
         </div>
       </section>
+
+
+      {/* FAQs */}
+      {/* <Faqs4 /> */}
+     
+      <section className="relative w-full h-screen overflow-hidden">
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          src={videoBg} // Replace with your video path
+          type="video/mp4"
+        />
+        
+      </section>
       {/**get started */}
-      <GetStarted />
+      {/* <GetStarted /> */}
 
 
     </div>

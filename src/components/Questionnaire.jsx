@@ -257,19 +257,19 @@ const Questionnaire = () => {
     <div className={`w-full h-full flex flex-col ${showCongrats ? 'items-start' : ''} items-ce justify-center`}>
       {showCongrats ? (
         <div className="w-full flex flex-col items-start mt-20 text-justify animate-fadeIn transition-all duration-500 sm:w-[80%]">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-[50px] text-black uppercase font-bold mb-4 flex xs:flex-row flex-col items-center gap-2 mr-3">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-[50px] text-white uppercase font-bold mb-4 flex xs:flex-row flex-col items-center gap-2 mr-3">
             <FaCheckCircle className="text-green-500 sm:text-6xl xs:text-5xl text-3xl mb-4" />
             Congratulations!
           </h2>
-          <p className="text-md sm:text-[20px] text-black mb-6 font-semibold">
+          <p className="text-md sm:text-[20px] text-white mb-6 font-semibold">
             We can&apos;t wait to start working with you! Please check your email for more details.
           </p>
-          <p className="text-lg text-black/60 font-semibold">
+          <p className="text-lg text-white/60 font-semibold">
             Keep exploring the other parts of our site and feel free to reach out for any assistance.
           </p>
           <Button
             variant="outlined"
-            className="mt-6 text-black border-black hover:bg-black hover:text-white hover:scale-105 py-3 px-6 transition-all duration-300"
+            className="mt-6 text-white border-black hover:bg-black hover:text-white hover:scale-105 py-3 px-6 transition-all duration-300"
             onClick={handleCongrats} // Option to scroll to the top
           >
             Submit another response
@@ -277,7 +277,7 @@ const Questionnaire = () => {
         </div>
       ) : (
         <>
-          <Progress value={progressPercentage} color="green" />;
+          <Progress value={progressPercentage} color="green" className="mb-5" />
 
 
           <div
@@ -285,7 +285,7 @@ const Questionnaire = () => {
           >
             {isFormStep ? (
               <div className="flex flex-col gap-4 mr-2">
-                <h2 className="text-3xl text-black font-bold mb-6">Contact Details</h2>
+                <h2 className="text-3xl text-white font-bold mb-6">Contact Details</h2>
                 <input
                   type="text"
                   name="name"
@@ -314,15 +314,15 @@ const Questionnaire = () => {
 
             ) : (
               <>
-                <h2 style={{ fontFamily: "'ITC Avant Garde Gothic', sans-serif" }} className="md:text-3xl text-2xl xl:text-center lg:text-5xl text-black font-bold mb-6">{questions[currentStep].question}</h2>
+                <h2 style={{ fontFamily: "'ITC Avant Garde Gothic', sans-serif" }} className="md:text-xl text-lg lg:text-center lg:text-3xl text-white font-bold mb-6">{questions[currentStep].question}</h2>
                 {!isTextareaQuestion ? (
-                  <div className="flex flex-col gap-4 text-black">
+                  <div className="flex flex-col gap-4 text-white">
                     {questions[currentStep].options?.map((option, index) => (
                       <button
                         style={{ fontFamily: "'ITC Avant Garde Gothic', sans-serif" }}
                         key={index}
                         onClick={() => handleOptionClick(option)}
-                        className={`sm:px-8 sm:py-4 px-6 py-3  text-lg md:text-xl lg:text-2xl font-semibold rounded-md border border-black ${selectedOption === option ? 'bg-green-600' : 'bg-transparent'} hover:bg-green-600 transition-all duration-300`}
+                        className={`sm:px-8 sm:py-4 px-6 py-3  text-lg md:text-xl lg:text-2xl font-semibold rounded-md border border-white  ${selectedOption === option ? 'bg-black' : 'bg-transparent'} hover:bg-black transition-all duration-300`}
                       >
                         {option.label}
                       </button>
@@ -419,7 +419,7 @@ const Questionnaire = () => {
           <div className="mt-8 flex justify-center sm:flex-row flex-col sm:gap-20 gap-5 items-center w-full  ">
             <Button
               variant="outlined"
-              className="text-black hover:bg-primary-100 border-black lg:text-2xl sm:py-3 sm:px-6 py-2 px-4 w-full" // Added min-width
+              className="text-white hover:bg-primary-100 border-white border-2 lg:text-2xl sm:py-3 sm:px-6 py-2 px-4 w-full" // Added min-width
               onClick={handleBackClick}
               disabled={currentStep === 0}
             >
@@ -429,7 +429,7 @@ const Questionnaire = () => {
             {isFormStep ? (
               <Button
                 variant="outlined"
-                className="text-black hover:bg-primary-100 border-black sm:py-3 lg:text-2xl sm:px-6 py-2 px-4 w-full" // Added min-width
+                className="text-white hover:bg-primary-100 border-white border-2 sm:py-3 lg:text-2xl sm:px-6 py-2 px-4 w-full" // Added min-width
                 onClick={handleSubmit}
               >
                 Submit
@@ -437,7 +437,7 @@ const Questionnaire = () => {
             ) : (
               <Button
                 variant="outlined"
-                className="text-black hover:bg-primary-100 border-black sm:py-3 lg:text-2xl sm:px-6 py-2 px-4 w-full" // Added min-width
+                className="text-white hover:bg-primary-100 border-white border-2 sm:py-3 lg:text-2xl sm:px-6 py-2 px-4 w-full" // Added min-width
                 onClick={handleNextClick}
                 disabled={!selectedOption && !textareaValue}
               >

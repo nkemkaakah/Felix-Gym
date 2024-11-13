@@ -1,6 +1,7 @@
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 import { Button, Typography } from "@material-tailwind/react";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 const faqs = [
     {
@@ -61,12 +62,12 @@ export function Faqs4() {
     return (
         <section
             ref={sectionRef}
-            className={`px-8 py-20  ${isVisible ? "fade-in visible" : "fade-in"}`}
+            className={` sm:px-8 py-20  ${isVisible ? "fade-in visible" : "fade-in"}`}
             id="faqs"
         >
 
             <div className="container mx-auto">
-                <div className="mb-14 text-left ml-6 md:ml-0 lg:ml-4">
+                <div className="mb-14 text-left   md:ml-0 lg:ml-4">
                     <Typography
                         variant="h1"
                         color="black"
@@ -77,17 +78,14 @@ export function Faqs4() {
                     <Typography className="mb-3 font-normal text-[30px] !text-black-300 lg:max-w-3xl">
                         ASK US ANYTHING?
                     </Typography>
-                    <Button
+                    {/* <Button
                         ripple={true}
-                        className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-white hover:text-black focus:ring-4 focus:outline-none focus:ring-green-600 dark:focus:ring-green-800 shadow-lg shadow-green-600/50 dark:shadow-lg dark:shadow-green-800/80 text-[50px]  font-bold uppercase text-white transition-all !duration-300"
-                        onClick={() => {
-                            const section = document.querySelector("#questionnaire-section");
-                            section.scrollIntoView({ behavior: "smooth" });
-                        }}
+                        className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-white hover:text-black focus:ring-4 focus:outline-none focus:ring-green-600 dark:focus:ring-green-800 shadow-lg shadow-green-600/50 dark:shadow-lg dark:shadow-green-800/80 text-2xl  md:text-4xl lg:text-[50px] xl:text-6xl  font-bold uppercase text-white transition-all !duration-300 "
+
 
                     >
-                        Start Now!
-                    </Button>
+                        <Link to='/'>Find Your Program Now!</Link>
+                    </Button> */}
 
                 </div>
                 <div className="max-w-5xl mx-auto grid gap-10">

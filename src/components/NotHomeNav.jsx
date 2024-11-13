@@ -4,7 +4,7 @@ import white_logo from '../assets/White Gutzfit logo WP.png'
 import black_logo from '../assets/Gutzfit logo.png'
 import { AboutDropDown, AboutMobileDropDown, FollowMeDropDown, FollowMeMobileDropDown, TrainingDropDown, TrainingMobileDropDown } from './dropdowns/NavDropDowns'
 import { useLocation } from 'react-router-dom'
-const Navbar = () => {
+const NotHomeNav = () => {
     const location = useLocation();
     const isHomeRoute = location.pathname === '/';
 
@@ -31,13 +31,10 @@ const Navbar = () => {
     }, [navmobile]);
 
     return (
-        <header className={`${isActive ? 'bg-black py-[2px]' : 'bg-transparent py-[3px]'} ${!isHomeRoute ? "border-b-2" : ""} fixed w-full z-30 left-0 right-0 mx-auto top-0 flex justify-between items-center px-[10px] lg:px-[40px] transition-all duration-300`}>
+        <header className={`border-b-2  w-full z-30 left-0 right-0 mx-auto top-0 flex justify-between items-center px-[10px] lg:px-[40px] transition-all duration-300`}>
 
             <a href="/" className='flex items-center flex-col gap-0 '>
-                {isHomeRoute || isActive ?
-                    (<img src={white_logo} alt="" className=" h-[150px] hover:scale-105 transition-all duration-300" />) :
-                    (<img src={black_logo} alt="" className=" h-[150px] hover:scale-105 transition-all duration-300" />)
-                }
+                <img src={black_logo} alt="" className=" h-[150px] hover:scale-105 transition-all duration-300" />
                 {/* <h1 className='text-white text-4xl'>Felix Gym</h1> */}
             </a>
             <nav className='hidden lg:flex'>
@@ -80,4 +77,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default NotHomeNav

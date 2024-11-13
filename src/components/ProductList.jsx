@@ -7,6 +7,7 @@ import {
     Typography,
 } from "@material-tailwind/react";
 import { Programs } from "../assets/contents";
+import { Link } from "react-router-dom";
 
 
 
@@ -14,11 +15,12 @@ export function ProductListCard({
     img,
     name,
     price,
+    id
 }) {
     return (
-        <Card shadow={false} className="border-none border-gray-300 flex flex-col items-center">
+        <Link to={`/training-programs/${id}`} state={{ id }} className="border-none border-gray-300 flex flex-col items-center">
             <CardBody className="pb-0">
-                <img src={img} alt={img} className="max-w-[300px] max-h-[300px] w-full object-cover" />
+                <img src={img} alt={img} className="max-w-[300px] h-[250px] w-full object-cover" />
                 <div className="flex justify-between">
                     <div>
                         <Typography className="mb-2 mr-3" color="blue-gray" variant="h5">
@@ -37,7 +39,7 @@ export function ProductListCard({
             <CardFooter className="pt-0">
                 <Button className="text-lg hover:scale-105 transition-all duration-200 hover:bg-black/75">Get Plan Now</Button>
             </CardFooter>
-        </Card>
+        </Link>
     );
 }
 // export const CONTENTS = [
@@ -90,14 +92,18 @@ export function ProductListSection4() {
             </div>
             <div className="mx-auto container">
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 md:grid-cols-2">
-                    {Programs.slice(0, 3).map(({ img, name, price }, index) => (
-                        <ProductListCard
-                            key={index}
-                            img={img}
-                            name={name}
-                            price={price}
-                        />
-                    ))}
+                    {Programs.slice(0, 3).map(({ img, name, price, id }, index) => {
+                        console.log("ID:", id); // Add this line to debug
+                        return (
+                            <ProductListCard
+                                key={index}
+                                img={img}
+                                name={name}
+                                price={price}
+                                id={id}
+                            />
+                        );
+                    })}
                 </div>
             </div>
         </section>
