@@ -1,8 +1,8 @@
-import outdoorimg from "./shared6.jpg"
-import blastimg from "./IMG_1064.JPG"
-import metconimg from "./IMG_0997.JPG"
-import shredimg from "./IMG_2136.jpg"
-import oneimg from "./IMG_0559.JPG"
+import outdoorimg from "./IMG_0728.JPG"
+import blastimg from "./IMG_0882.JPG"
+import metconimg from "./IMG_0830_jpg.jpg"
+import shredimg from "./shared7.jpg"
+import oneimg from "./shared6.jpg"
 
 export const Programs = [
     {

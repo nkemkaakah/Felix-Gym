@@ -105,6 +105,7 @@ export function ProductListSection4() {
                         );
                     })}
                 </div>
+                <Button variant="gradient" className="bg-black" onClick={() => window.location.href='/training-programs'}>See More</Button>
             </div>
         </section>
     );

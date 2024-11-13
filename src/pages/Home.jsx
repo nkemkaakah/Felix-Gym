@@ -53,19 +53,19 @@ const Home = () => {
   return (
     <div className=''>
       {/* hero section */}
-      
+
       {/* <Banner /> */}
       <CarouselWithOverlay />
-       {/* traing programs */}
-       <ProductListSection4 />
+      {/* traing programs */}
+      <ProductListSection4 />
       {/* testimonial */}
       {/* section-title-group max-w-[240px] px-4 lg:px-0 lg:ml-0 mx-auto */}
-      <TestimonialSection16 />
-     
+
+
       {/* shop coming soon */}
 
-       {/* leanr from a pro section w video */}
-       <section className="relative w-full h-screen overflow-hidden">
+      {/* leanr from a pro section w video */}
+      <section className="relative w-full h-screen overflow-hidden">
         <div className="relative z-10 flex flex-col items-start justify-center w-full h-full" style={{ backgroundImage: `url(${banner1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           {/* Optional semi-transparent background removed */}
           <Card className="mt-6 w-full sm:w-[80%] md:w-[60%] xl:w-[40%] xl:h-[40%]  ">
@@ -97,10 +97,10 @@ const Home = () => {
         </div>
       </section>
 
-
+      <TestimonialSection16 />
       {/* FAQs */}
       {/* <Faqs4 /> */}
-     
+
       <section className="relative w-full h-screen overflow-hidden">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
@@ -110,7 +110,7 @@ const Home = () => {
           src={videoBg} // Replace with your video path
           type="video/mp4"
         />
-        
+
       </section>
       {/**get started */}
       {/* <GetStarted /> */}

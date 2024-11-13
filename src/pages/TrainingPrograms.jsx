@@ -6,7 +6,7 @@ import { Programs } from '../assets/contents'
 
 const TrainingPrograms = () => {
   return (
-    <div className='mt-[100px] sm:mt-40 md:mt-40 p-20 px-2 sm:px-10'>
+    <div className=' p-20 py-3 px-2 sm:px-10'>
       <Typography variant="h1">Training Programs</Typography>
       <Typography className='font-semibold mt-3 w-full'>
         Unlock your fitness potential with our comprehensive training programs.
