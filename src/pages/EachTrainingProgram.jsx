@@ -68,12 +68,13 @@ const EachTrainingProgram = () => {
 
 
   return (
-    <section className="py-16 px-8 mt-[100px] sm:mt-40 md:mt-40 ">
+    <section className="py-16 px-8">
       <div className="mx-auto container grid place-items-center grid-cols-1 md:grid-cols-2">
         <img
           src={img}
           alt="pink blazer"
-          className="h-[36rem]"
+          className="h-[36rem] rounded-sm"
+          
         />
         <div className='md: ml-3'>
           <Typography className="mb-4" variant="h3">

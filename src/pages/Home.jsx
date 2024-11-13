@@ -68,7 +68,7 @@ const Home = () => {
       <section className="relative w-full h-screen overflow-hidden">
         <div className="relative z-10 flex flex-col items-start justify-center w-full h-full" style={{ backgroundImage: `url(${banner1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           {/* Optional semi-transparent background removed */}
-          <Card className="mt-6 w-full sm:w-[80%] md:w-[60%] xl:w-[40%] xl:h-[40%]  ">
+          <Card className="mt-6 w-full sm:w-[80%] md:w-[60%] xl:w-[40%] max-h-full  ">
             <CardBody className='h-full'>
               <Typography variant="h5" color="blue-gray" className="mb-10 uppercase text-4xl font-extrabold xl:!mt-10 xl:text-[50px] ">
                 Train the Gutzfit Way

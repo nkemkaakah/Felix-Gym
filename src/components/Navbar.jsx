@@ -40,18 +40,16 @@ const Navbar = () => {
                 }
                 {/* <h1 className='text-white text-4xl'>Felix Gym</h1> */}
             </a>
-            <nav className='hidden lg:flex'>
-                <ul className='flex text-black xl:gap-x-5 gap-x-10  '>
+            <nav className='hidden lg:flex '>
+                <ul className='flex  text-black xl:gap-x-28 gap-x-10  '>
                     <li onClick={() => setNavMobile(false)}><AboutDropDown isActive={isActive} dark={isHomeRoute} /></li>
                     <li onClick={() => setNavMobile(false)}><TrainingDropDown dark={isHomeRoute} /></li>
                     <li onClick={() => setNavMobile(false)}><FollowMeDropDown dark={isHomeRoute} /></li>
-
-
-
                 </ul>
             </nav>
-            <div className='hidden lg:flex space-x-0 '>
-                <button className={`btn ${isHomeRoute ? 'btn-sm text-white hover:text-primary-200' : 'btn-lg hover:text-gray-700'}   transition`}>Login</button>
+            
+            <div className='hidden lg:flex space-x-2 '>
+                <button className={`btn ${isHomeRoute ? 'btn-sm text-white hover:bg-gray-600' : 'btn-lg hover:text-gray-400'} rounded-sm  transition-all duration-200`}>Login</button>
                 <button className={`btn btn-sm ${isHomeRoute ? 'btn-primary text-black' : 'btn-secondary bg-black text-white rounded-md '} `}>SignUp</button>
             </div>
             <div onClick={() => setNavMobile(!navmobile)} className='lg:hidden absolute right-4 top-6'>
@@ -71,7 +69,7 @@ const Navbar = () => {
                 </ul>
 
                 <div className='-mt-44 flex justify-center gap-x-8'>
-                    <button className='btn btn-lg  text-white' onClick={() => setNavMobile(false)}>Log in</button>
+                    <button className='btn btn-lg  text-white hover:bg-gray-400 transition-all duration-200' onClick={() => setNavMobile(false)}>Log in</button>
                     <button className='btn btn-lg btn-primary text-black' onClick={() => setNavMobile(false)}>Sign up</button>
                 </div>
             </nav>

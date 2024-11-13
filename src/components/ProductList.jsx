@@ -19,8 +19,8 @@ export function ProductListCard({
 }) {
     return (
         <Link to={`/training-programs/${id}`} state={{ id }} className="border-none border-gray-300 flex flex-col items-center">
-            <CardBody className="pb-0">
-                <img src={img} alt={img} className="max-w-[300px] h-[250px] w-full object-cover" />
+            <CardBody className="pb-0 ">
+                <img src={img} alt={img} className="aspect-220/241 w-[220px] overflow-hidden rounded-lg object-cover" />
                 <div className="flex justify-between">
                     <div>
                         <Typography className="mb-2 mr-3" color="blue-gray" variant="h5">
@@ -105,7 +105,10 @@ export function ProductListSection4() {
                         );
                     })}
                 </div>
-                <Button variant="gradient" className="bg-black" onClick={() => window.location.href='/training-programs'}>See More</Button>
+                <div className="flex justify-end">
+                    <Button variant="gradient" className="bg-black" onClick={() => window.location.href='/training-programs'}>See More</Button>
+                </div>
+                
             </div>
         </section>
     );
