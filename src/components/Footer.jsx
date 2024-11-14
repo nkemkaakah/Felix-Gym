@@ -81,7 +81,7 @@ export const Footer2 = () => {
     const handleOpen = (value) => setOpen(open === value ? 0 : value);
     return (
         <footer
-            className="bg-black text-white dark:bg-neutral-600 dark:text-neutral-200 lg:text-left p-20 !font-sans">
+            className="bg-black text-white dark:bg-neutral-600 dark:text-neutral-200 lg:text-left p-5 sm:p-20 !font-sans">
             {/* <div
             className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
             <div className="mr-12 hidden lg:block">
