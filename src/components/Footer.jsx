@@ -272,11 +272,11 @@ export const Footer2 = () => {
                             About
                         </h6>
                         <p className="mb-4">
-                            <a className="text-neutral-600 dark:text-neutral-200"
+                            <a href="/about" className="text-neutral-600 dark:text-neutral-200 hover:text-gray-400 duration-300 transition-all dark:hover:text-neutral-300 cursor-pointer"
                             >Gutzfit</a>
                         </p>
                         <p className="mb-4">
-                            <a className="text-neutral-600 dark:text-neutral-200"
+                            <a href="/newletter" className="text-neutral-600 dark:text-neutral-200 hover:text-gray-400 duration-300 transition-all dark:hover:text-neutral-300 cursor-pointer"
                             >Join our Newsletter</a>
                         </p>
 
@@ -289,11 +289,11 @@ export const Footer2 = () => {
                             Help Centre
                         </h6>
                         <p className="mb-4">
-                            <a className="text-neutral-600 dark:text-neutral-200"
+                            <a href="/help-center" className="text-neutral-600 dark:text-neutral-200 hover:text-gray-400 duration-300 transition-all dark:hover:text-neutral-300 cursor-pointer"
                             >FAQs</a>
                         </p>
                         <p className="mb-4">
-                            <a className="text-neutral-600 dark:text-neutral-200"
+                            <a className="text-neutral-600 dark:text-neutral-200 hover:text-gray-400 duration-300 transition-all dark:hover:text-neutral-300 cursor-pointer"
                             >Returns & Exchanges</a>
                         </p>
 
@@ -305,15 +305,15 @@ export const Footer2 = () => {
                             Terms & Conditions
                         </h6>
                         <p className="mb-4">
-                            <a className="text-neutral-600 dark:text-neutral-200"
+                            <a className="text-neutral-600 dark:text-neutral-200 hover:text-gray-400 duration-300 transition-all dark:hover:text-neutral-300 cursor-pointer"
                             >Terms & Conditions</a>
                         </p>
                         <p className="mb-4">
-                            <a className="text-neutral-600 dark:text-neutral-200"
+                            <a className="text-neutral-600 dark:text-neutral-200 hover:text-gray-400 duration-300 transition-all dark:hover:text-neutral-300 cursor-pointer"
                             >Privacy-Policy</a>
                         </p>
                         <p className="mb-4">
-                            <a className="text-neutral-600 dark:text-neutral-200"
+                            <a className="text-neutral-600 dark:text-neutral-200 hover:text-gray-400 duration-300 transition-all dark:hover:text-neutral-300 cursor-pointer"
                             >Do not sell or share my personal information</a>
                         </p>
 

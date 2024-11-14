@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   Button,
   IconButton,
@@ -66,6 +66,11 @@ const EachTrainingProgram = () => {
 
   const { img, name, price, description } = program;
 
+  useEffect(() => {
+    // Scroll to the top of the page when the component is mounted
+    window.scrollTo(0, 0);
+  }, []);
+
 
   return (
     <section className="py-16 px-8">
@@ -81,10 +86,10 @@ const EachTrainingProgram = () => {
             {name}
           </Typography>
           <div className="mb-4 flex w-full items-center gap-3 ">
-            <Button color="gray" className="hover:bg-gray-200 transition-colors duration-200">
+            <Button color="gray" className="hover:bg-gray-200 hover:text-black transition-all duration-200">
               Add to Cart
             </Button>
-            <Button color="green" className="hover:bg-green-200 transition-colors duration-200">
+            <Button color="green" className="hover:bg-green-200 hover:text-black transition-all  duration-200">
               Buy Now
             </Button>
 
