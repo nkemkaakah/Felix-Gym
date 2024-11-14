@@ -230,13 +230,13 @@ export const Footer2 = () => {
             <div className="mx-6 py-10 text-center md:text-left">
                 <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                     {/* <!-- TW Elements section --> */}
-                    <div className="flex md:flex-col justify-between md:gap-0 ">
+                    <div className="flex md:flex-col justify-between md:gap-0  ">
 
                         <Typography
                             as="a"
                             href="#"
                             color="blue-gray"
-                            className=" font-extrabold flex md:mb-5 text-[40px] text-white transition-colors uppercase hover:text-green-500 focus:text-green-500"
+                            className=" font-extrabold flex items-center md:mb-5 text-xl md:text-[40px] text-white transition-colors uppercase hover:text-green-500 focus:text-green-500"
                         >
                             <img src={white_logo} alt="logo-ct" className="w-10" />
                             Gutzfit
