@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { RiCloseFill, RiMenu4Fill } from 'react-icons/ri'
 import white_logo from '../assets/White Gutzfit logo WP.png'
 import black_logo from '../assets/Gutzfit logo.png'
-import { AboutDropDown, AboutMobileDropDown, FollowMeDropDown, FollowMeMobileDropDown, TrainingDropDown, TrainingMobileDropDown } from './dropdowns/NavDropDowns'
+import { AboutDropDown, AboutMobileDropDown, FollowMeDropDown, FollowMeMobileDropDown, SignUpModal, TrainingDropDown, TrainingMobileDropDown } from './dropdowns/NavDropDowns'
 import { useLocation } from 'react-router-dom'
 const Navbar = () => {
     const location = useLocation();
@@ -10,6 +10,9 @@ const Navbar = () => {
 
     const [isActive, setIsActive] = useState(false)
     const [navmobile, setNavMobile] = useState(false)
+
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen((cur) => !cur);
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -50,8 +53,10 @@ const Navbar = () => {
             
             <div className='hidden lg:flex space-x-2 '>
                 <button className={`btn ${isHomeRoute ? 'btn-sm text-white hover:bg-gray-600' : 'btn-lg hover:text-gray-400'} rounded-sm  transition-all duration-200`}>Login</button>
-                <button className={`btn btn-sm ${isHomeRoute ? 'btn-primary text-black' : 'btn-secondary bg-black text-white rounded-md '} `}>SignUp</button>
+                <button className={`btn btn-sm ${isHomeRoute ? 'btn-primary text-black' : 'btn-secondary bg-black text-white rounded-md '} `} onClick={handleOpen}>SignUp</button>
+                
             </div>
+            <SignUpModal open={open} handleOpen={handleOpen} />
             <div onClick={() => setNavMobile(!navmobile)} className='lg:hidden absolute right-4 top-6'>
                 {navmobile ? (<RiCloseFill className='text-primary-200 text-3xl cursor-pointer' />) :
                     (
