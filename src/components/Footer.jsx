@@ -157,7 +157,7 @@ export const Footer2 = () => {
             <div className="sm:hidden flex-col ">
                 <>
                     <Accordion open={open === 1} icon={<Icon id={1} open={open} />} >
-                        <AccordionHeader onClick={() => handleOpen(1)} className="text-white">About</AccordionHeader>
+                        <AccordionHeader onClick={() => handleOpen(1)} className="text-white hover:text-white focus:text-white">About</AccordionHeader>
                         <AccordionBody className="text-white font-semibold">
                             <p className="mb-4">
                                 <Link to='/about' className="text-neutral-600 dark:text-neutral-200"
@@ -170,12 +170,12 @@ export const Footer2 = () => {
                         </AccordionBody>
                     </Accordion>
                     <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
-                        <AccordionHeader onClick={() => handleOpen(2)} className="text-white">
+                        <AccordionHeader onClick={() => handleOpen(2)} className="text-white hover:text-white focus:text-white">
                             Help Centre
                         </AccordionHeader>
                         <AccordionBody className="text-white font-semibold">
                             <p className="mb-4">
-                                <Link to='/faqs' className="text-neutral-600 dark:text-neutral-200"
+                                <Link to='/help-center' className="text-neutral-600 dark:text-neutral-200"
                                 >FAQs</Link>
                             </p>
                             <p className="mb-4">
@@ -185,7 +185,7 @@ export const Footer2 = () => {
                         </AccordionBody>
                     </Accordion>
                     <Accordion open={open === 3} icon={<Icon id={3} open={open} />} className="text-white">
-                        <AccordionHeader onClick={() => handleOpen(3)} className="text-white">
+                        <AccordionHeader onClick={() => handleOpen(3)} className="text-white hover:text-white focus:text-white">
                             Terms & Conditions
                         </AccordionHeader>
                         <AccordionBody className="text-white font-semibold">
