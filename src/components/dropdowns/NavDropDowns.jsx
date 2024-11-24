@@ -130,7 +130,7 @@ export function FollowMeMobileDropDown({ dark }) {
       }}
     >
       <MenuHandler>
-        <Button className={`text-lg md:text-xl lg:text-[25px] xl:text-4xl xxl:text-[60px] hover:text-green-600 font-semibold  transition duration-300  border-none p-0 bg-transparent shadow-none`} > Follow Me</Button>
+        <Button className={`text-lg md:text-xl lg:text-[25px] xl:text-4xl xxl:text-[60px]  font-semibold  transition duration-300  border-none p-0 bg-transparent shadow-none`} > Follow Me</Button>
       </MenuHandler>
       <MenuList className="flex flex-col gap-3">
         <Link to="https://www.instagram.com/gutzfit?igsh=MWUzMGV0Z3lidnhkdA%3D%3D&utm_source=qr">Instagram</Link >

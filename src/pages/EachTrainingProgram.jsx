@@ -78,10 +78,10 @@ const EachTrainingProgram = () => {
         <img
           src={img}
           alt="pink blazer"
-          className="h-[36rem] rounded-sm"
+          className="h-[36rem] rounded-sm w-full object-cover object-top"
           
         />
-        <div className='md: ml-3'>
+        <div className='md:ml-3'>
           <Typography className="mb-4" variant="h3">
             {name}
           </Typography>
@@ -95,7 +95,7 @@ const EachTrainingProgram = () => {
 
           </div>
           <Typography variant="h5">{price}</Typography>
-          <Typography className="!mt-4 text-base font-normal leading-[27px] !text-gray-500">
+          <Typography className="!mt-4 text-base font-normal text-justify leading-[27px] !text-gray-500">
             {description}
           </Typography>
           <div className="my-8 flex items-center gap-2">
