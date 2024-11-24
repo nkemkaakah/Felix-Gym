@@ -1,12 +1,15 @@
 /* eslint-disable react/prop-types */
 import {
   Card,
+  Carousel,
   CardBody,
   CardHeader,
   Typography,
+  IconButton,
 } from "@material-tailwind/react";
 import { MdOutlineMessage } from "react-icons/md";
 import FadeInSection from "./FadeInSection";
+
 
 function TestimonialCard({ client, title, clientInfo }) {
   return (
@@ -50,6 +53,19 @@ const testimonials = [
     clientInfo: "Regular Gym-Goer",
     img: "https://www.material-tailwind.com/image/gym-user-2.svg",
   },
+  {
+    title: "I was initially sceptical about online fitness programs, but Gutzfit’s approach is something else! His guidance on combining traditional meals with effective training was exactly what I needed. I’m proud to say I’ve lost weight, gained strength, and finally feel like fitness is sustainable for me. His emphasis on building confidence and community has motivated me to reach new goals and inspire those around me",
+    client: "Ben R",
+    clientInfo: "Fitness Enthusiast",
+    img: "/image/gym-user.svg",
+  },
+  {
+    title:
+      "I had no idea a fitness program could fit my life so seamlessly! Gutzfit’s workouts are challenging, and his philosophy around maintaining cultural foods made me feel at home in my fitness journey. His idea of ‘attacking the day’ has changed my morning routine and keeps me focused on my goals. I’m thrilled with my progress and grateful to be part of a supportive community. This has been more than just a fitness journey – it’s a lifestyle transformation!",
+    client: "James L",
+    clientInfo: "Regular Gym-Goer",
+    img: "https://www.material-tailwind.com/image/gym-user-2.svg",
+  },
 ];
 
 export function TestimonialSection16() {
@@ -63,31 +79,97 @@ export function TestimonialSection16() {
             <Typography
               variant="h2"
               color="black"
-              className="mb-4 !text-2xl lg:!text-[50px] !font-extrabold !special-font uppercase animate-fade-slide-up"
+              className="pb-8 !text-2xl lg:!text-6xl !font-black  uppercase animate-fade-slide-up"
             >
-             What are clients saying
+              What are clients saying
             </Typography>
           </div>
         </FadeInSection>
 
         {/* Wrap the description text */}
-        <FadeInSection>
+        {/* <FadeInSection>
           <Typography variant="lead" className="max-w-3xl text-black-300 mb-10 lg:mb-20 font-semibold">
             From life-enhancing gadgets to unparalleled customer support, and transformative learning opportunities.
           </Typography>
-        </FadeInSection>
-
-        {/* Wrap the testimonial cards */}
+        </FadeInSection> */}
         <FadeInSection>
-          <div className="grid gap-8 grid-cols-1 lg:grid-cols-2">
+          <Carousel loop={true} autoplay={true} className="rounded-xl"
+            navigation={({ setActiveIndex, activeIndex, length }) => (
+              <div className="absolute bottom-4 left-2/4 z-0 flex -translate-x-2/4 gap-2">
+                {new Array(length).fill("").map((_, i) => (
+                  <span
+                    key={i}
+                    className={` h-1 cursor-pointer rounded-2xl hidden transition-all content-[''] ${activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+                      }`}
+                    onClick={() => setActiveIndex(i)}
+                  />
+                ))}
+              </div>
+            )}
+            prevArrow={({ handlePrev }) => (
+              <IconButton
+                variant="text"
+                color="white"
+                size="lg"
+                onClick={handlePrev}
+                className="!absolute hidden top-2/4 left-4 -translate-y-2/4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="h-6 w-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                  />
+                </svg>
+              </IconButton>
+            )}
+            nextArrow={({ handleNext }) => (
+              <IconButton
+                variant="text"
+                color="white"
+                size="lg"
+                onClick={handleNext}
+                className="!absolute hidden top-2/4 !right-4 -translate-y-2/4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="h-6 w-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </IconButton>
+            )}>
             {testimonials.map((props, key) => (
               <TestimonialCard key={key} {...props} />
             ))}
-          </div>
+          </Carousel>
         </FadeInSection>
 
+
+        {/* Wrap the testimonial cards */}
+        {/* <FadeInSection>
+          <div className="grid gap-8 grid-cols-1 lg:grid-cols-2">
+            
+          </div>
+        </FadeInSection> */}
+
         {/* Wrap the quote card */}
-        <FadeInSection>
+        {/* <FadeInSection>
           <Card shadow={false} className="mt-8 bg-blue text-center rounded-2xl p-6">
             <CardHeader color="" floated={false} shadow={false}>
               <Typography
@@ -126,7 +208,7 @@ export function TestimonialSection16() {
               </Typography>
             </CardBody>
           </Card>
-        </FadeInSection>
+        </FadeInSection> */}
       </div>
     </section>
   );
