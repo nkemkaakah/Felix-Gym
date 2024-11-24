@@ -63,9 +63,9 @@ export function TestimonialSection16() {
             <Typography
               variant="h2"
               color="black"
-              className="mb-4 !text-2xl lg:!text-[50px] font-extrabold !special-font uppercase animate-fade-slide-up"
+              className="mb-4 !text-2xl lg:!text-[50px] !font-extrabold !special-font uppercase animate-fade-slide-up"
             >
-              Community
+             What are clients saying
             </Typography>
           </div>
         </FadeInSection>

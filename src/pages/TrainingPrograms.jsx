@@ -9,9 +9,9 @@ const TrainingPrograms = () => {
     <div className=' p-20 py-3 px-2 sm:px-10 mb-40 pt-20'>
       <Typography variant="h1">Training Programs</Typography>
       <Typography className='font-semibold mt-3 w-full'>
-        Unlock your fitness potential with our comprehensive training programs.
-        From strength training to cardio exercises, our programs are designed to
-        help you achieve your goals and transform your body.
+        Explore our diverse range of training programs tailored to your fitness needs.
+        From strength training to cardio, find the perfect program to help you achieve
+        your goals.
       </Typography>
       <div className=" ml-auto mr-[5%] container ">
         <div className="grid grid-cols-1 xs:grid-cols-2 gap-8 md:grid-cols-3 xl:grid-cols-5 ">

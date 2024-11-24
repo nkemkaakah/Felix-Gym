@@ -1,4 +1,4 @@
-import { Accordion, AccordionBody, AccordionHeader, Input, Typography } from "@material-tailwind/react";
+import { Accordion, AccordionBody, AccordionHeader, Button, Input, Typography } from "@material-tailwind/react";
 
 import { useState } from "react";
 import black_logo from '../assets/Gutzfit logo.png';
@@ -219,7 +219,7 @@ export const Footer2 = () => {
                                     labelProps={{
                                         className: "hidden",
                                     }}
-                                    containerProps={{ className: "min-w-[100px]" }}
+                                    containerProps={{ className: "min-w-[40px]" }}
                                 />
                             </div>
                         </AccordionBody>
@@ -238,8 +238,8 @@ export const Footer2 = () => {
                             color="blue-gray"
                             className=" font-extrabold flex items-center md:mb-5 text-xl md:text-[40px] text-white transition-colors uppercase hover:text-green-500 focus:text-green-500"
                         >
-                            <img src={white_logo} alt="logo-ct" className="w-10" />
-                            Gutzfit
+                            <img src={white_logo} alt="logo-ct" className="w-10 md:w-16" />
+                           
                         </Typography>
                         <div className="flex  items-center flex-wrap gap-4">
                             {/* Instagram */}
@@ -398,6 +398,10 @@ export const Footer2 = () => {
 
                 </div>
 
+            </div>
+
+            <div className="flex justify-end">
+                <Button variant="gradient" className="text-black bg-white hover:bg-blue-gray-50 transition-all duration-300">Contact Us</Button>
             </div>
 
             {/* <!--Copyright section--> */}

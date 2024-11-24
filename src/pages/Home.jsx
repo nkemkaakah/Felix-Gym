@@ -4,7 +4,7 @@ import {
   CardBody,
   Typography
 } from "@material-tailwind/react";
-import banner1 from '../assets/IMG_0518.jpg'
+import banner1 from '../assets/IMG_0559.JPG'
 
 import videoBg from '../assets/Copy of GUTZFIT YOUTUBE .mp4';
 import { CarouselWithOverlay } from '../components/Banner';
@@ -140,6 +140,7 @@ const Home = () => {
           autoPlay
           loop
           muted
+          playsInline
           src={videoBg} // Replace with your video path
           type="video/mp4"
         />
