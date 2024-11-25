@@ -19,13 +19,13 @@ import {
 } from "@material-tailwind/react";
 
 import {
-  
+
   Dialog,
   DialogHeader,
   DialogBody,
   DialogFooter,
 } from "@material-tailwind/react";
- 
+
 
 export function DialogDefault({ handleDialogOpen, dialogOpen }) {
   return (
@@ -78,18 +78,18 @@ const EachTrainingProgram = () => {
         <img
           src={img}
           alt="pink blazer"
-          className="h-[36rem] rounded-sm w-full object-cover object-top"
-          
+          className="h-[36rem] w-full rounded-sm object-cover md:w-auto md:object-top"
         />
+
         <div className='md:ml-3'>
           <Typography className="mb-4" variant="h3">
             {name}
           </Typography>
           <div className="mb-4 flex w-full items-center gap-3 ">
-            <Button color="gray" className="hover:bg-gray-200 hover:text-black transition-all duration-200">
+            <Button color="gray" className="hover:bg-gray-100 hover:text-black transition-all duration-300">
               Add to Cart
             </Button>
-            <Button color="green" className="hover:bg-green-200 hover:text-black transition-all  duration-200">
+            <Button color="green" className="hover:bg-green-500 hover:text-black transition-all  duration-300">
               Buy Now
             </Button>
 

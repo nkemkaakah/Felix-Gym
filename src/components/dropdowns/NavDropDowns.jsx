@@ -109,7 +109,7 @@ export function FollowMeDropDown({ dark }) {
         unmount: { y: 25 },
       }}
     >
-      <MenuHandler>
+       <MenuHandler>
         <Button className={`text-lg ${!dark ? "text-black" : ""} md:text-xl lg:text-[25px] xl:text-4xl xxl:text-[60px]  font-semibold  transition duration-300  border-none p-0 bg-transparent shadow-none`} > Follow Me</Button>
       </MenuHandler>
       <MenuList className="flex flex-col gap-3">

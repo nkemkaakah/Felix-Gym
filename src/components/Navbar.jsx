@@ -52,7 +52,7 @@ const Navbar = () => {
             </nav>
             
             <div className='hidden lg:flex space-x-2 '>
-                <button className={`btn ${isHomeRoute ? 'btn-sm text-white hover:bg-gray-600' : 'btn-lg hover:text-gray-400'} rounded-sm  transition-all duration-200`}>Login</button>
+                <button className={`btn ${isHomeRoute ? 'btn-sm text-white hover:bg-gray-600' : 'btn-lg hover:text-black'}  rounded-sm  transition-all duration-200`}>Login</button>
                 <button className={`btn btn-sm ${isHomeRoute ? 'btn-primary text-black' : 'btn-secondary bg-black text-white rounded-md '} `} onClick={handleOpen}>SignUp</button>
                 
             </div>
