@@ -1,21 +1,21 @@
 /* eslint-disable no-unused-vars */
 import {
+  Avatar,
   Button,
+  Card,
   Dialog,
-  DialogHeader,
   DialogBody,
   DialogFooter,
-  Progress,
+  DialogHeader,
   List,
   ListItem,
   ListItemPrefix,
-  Avatar,
-  Card,
+  Progress,
   Typography,
 } from "@material-tailwind/react";
 
-import { FaCheckCircle } from "react-icons/fa";
 import React, { useEffect, useState } from 'react';
+import { FaCheckCircle } from "react-icons/fa";
 import { Programs } from "../assets/contents";
 
 const questions = [
@@ -264,7 +264,7 @@ const Questionnaire = () => {
           <p className="text-md sm:text-[20px] text-white mb-6 font-semibold">
             We can&apos;t wait to start working with you! Please check your email for more details.
           </p>
-          <p className="text-lg text-white/60 font-semibold">
+          <p className="text-sm text-white font-semibold">
             Keep exploring the other parts of our site and feel free to reach out for any assistance.
           </p>
           <Button
@@ -408,7 +408,7 @@ const Questionnaire = () => {
                   className="bg-black/90 text-white hover:scale-105"
                   onClick={handleShowCongrats}
                 >
-                  <span>Get Your Plan Now</span>
+                  <span>Sign Up / Log In</span>
                 </Button>
               </DialogFooter>
             </Dialog>

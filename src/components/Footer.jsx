@@ -85,7 +85,7 @@ export const Footer2 = () => {
     const [emailNews, setEmailNews] = useState("");
     const onChange = ({ target }) => setEmailNews(target.value);
 
-    const handleOpenContact = () => setOpenContact(!open);
+    const handleOpenContact = () => setOpenContact(!openContact);
 
     const handleOpen = (value) => setOpen(open === value ? 0 : value);
     return (
