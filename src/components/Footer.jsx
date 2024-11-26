@@ -1,6 +1,7 @@
-import { Accordion, AccordionBody, AccordionHeader, Button, Input, Typography } from "@material-tailwind/react";
+import { Accordion, AccordionBody, AccordionHeader, Button, Dialog, DialogBody, DialogFooter, DialogHeader, IconButton, Input, Option, Select, Textarea, Typography } from "@material-tailwind/react";
 
 import { useState } from "react";
+import { FaUser } from "react-icons/fa";
 import black_logo from '../assets/Gutzfit logo.png';
 import white_logo from '../assets/White Gutzfit logo WP.png';
 import FadeInSection from "./FadeInSection";
@@ -75,8 +76,16 @@ function Icon({ id, open }) {
     );
 }
 
+
+
 export const Footer2 = () => {
     const [open, setOpen] = useState(0);
+    const [openContact, setOpenContact] = useState(false);
+
+    const [emailNews, setEmailNews] = useState("");
+    const onChange = ({ target }) => setEmailNews(target.value);
+
+    const handleOpenContact = () => setOpenContact(!open);
 
     const handleOpen = (value) => setOpen(open === value ? 0 : value);
     return (
@@ -153,6 +162,162 @@ export const Footer2 = () => {
               </a>
             </div>
           </div> */}
+            <Dialog size="sm" open={openContact} handler={handleOpenContact} className="p-4">
+                <DialogHeader className="relative m-0 block">
+                    <Typography variant="h4" color="blue-gray">
+                        Contact Us
+                    </Typography>
+                    <Typography className="mt-1 font-normal text-gray-600">
+                        Keep your records up-to-date and organized.
+                    </Typography>
+                    <IconButton
+                        size="sm"
+                        variant="text"
+                        className="!absolute right-3.5 top-3.5"
+                        onClick={handleOpenContact}
+                    >
+                        {/* <XMarkIcon className="h-4 w-4 stroke-2" /> */}
+                    </IconButton>
+                </DialogHeader>
+                <DialogBody className="space-y-4 pb-6">
+                    <div className="flex gap-4">
+                        <div className="w-full">
+                            <Typography
+                                variant="small"
+                                color="blue-gray"
+                                className="mb-2 text-left font-medium"
+                            >
+                                First Name
+                            </Typography>
+                            <Input
+                                color="gray"
+                                size="lg"
+                                placeholder="Enter your first name"
+                                name="firstName"
+                                className="placeholder:opacity-100 focus:!border-t-gray-900"
+                                containerProps={{
+                                    className: "!min-w-full",
+                                }}
+                                labelProps={{
+                                    className: "hidden",
+                                }}
+                            />
+                        </div>
+                        <div className="w-full">
+                            <Typography
+                                variant="small"
+                                color="blue-gray"
+                                className="mb-2 text-left font-medium"
+                            >
+                                Last Name
+                            </Typography>
+                            <Input
+                                color="gray"
+                                size="lg"
+                                placeholder="Enter your last name"
+                                name="lastName"
+                                className="placeholder:opacity-100 focus:!border-t-gray-900"
+                                containerProps={{
+                                    className: "!min-w-full",
+                                }}
+                                labelProps={{
+                                    className: "hidden",
+                                }}
+                            />
+                        </div>
+                    </div>
+
+                    <div>
+                        <Typography
+                            variant="small"
+                            color="blue-gray"
+                            className="mb-2 text-left font-medium"
+                        >
+                            Email
+                        </Typography>
+                        <Input
+                            label="Email"
+                            color="gray"
+                            size="lg"
+                            placeholder="Enter your email"
+                            name="email"
+                            className="placeholder:opacity-100 focus:!border-t-gray-900"
+                            containerProps={{
+                                className: "!min-w-full",
+                            }}
+                            labelProps={{
+                                className: "hidden",
+                            }}
+                        />
+                    </div>
+
+                    {/* <div>
+                        <Typography
+                            variant="small"
+                            color="blue-gray"
+                            className="mb-2 text-left font-medium"
+                        >
+                            Category
+                        </Typography>
+                        <Select
+                            className="!w-full !border-[1.5px] !border-blue-gray-200/90 !border-t-blue-gray-200/90 bg-white text-gray-800 ring-4 ring-transparent placeholder:text-gray-600 focus:!border-primary focus:!border-t-blue-gray-900 group-hover:!border-primary"
+                            placeholder="1"
+                            labelProps={{
+                                className: "hidden",
+                            }}
+                        >
+                            <Option>Clothing</Option>
+                            <Option>Fashion</Option>
+                            <Option>Watches</Option>
+                        </Select>
+                    </div> */}
+                    <div>
+                        <Typography
+                            variant="small"
+                            color="blue-gray"
+                            className="mb-2 text-left font-medium"
+                        >
+                            Subject
+                        </Typography>
+                        <Input
+
+                            color="gray"
+                            size="lg"
+                            placeholder="Subject"
+                            name="subject"
+                            className="placeholder:opacity-100 focus:!border-t-gray-900"
+                            containerProps={{
+                                className: "!min-w-full",
+                            }}
+                            labelProps={{
+                                className: "hidden",
+                            }}
+                        />
+                    </div>
+                    <div>
+                        <Typography
+                            variant="small"
+                            color="blue-gray"
+                            className="mb-2 text-left font-medium"
+                        >
+                            Message
+                        </Typography>
+                        <Textarea
+                            rows={7}
+                            placeholder=""
+                            className="!w-full !border-[1.5px] !border-blue-gray-200/90 !border-t-blue-gray-200/90 bg-white text-gray-600 ring-4 ring-transparent focus:!border-primary focus:!border-t-blue-gray-900 group-hover:!border-primary"
+                            labelProps={{
+                                className: "hidden",
+                            }}
+                        />
+                    </div>
+                </DialogBody>
+                <DialogFooter>
+                    <Button className="ml-auto transition-all duration-300" onClick={handleOpenContact}>
+                        Send
+                    </Button>
+                </DialogFooter>
+            </Dialog>
 
             <div className="sm:hidden flex-col ">
                 <>
@@ -211,16 +376,25 @@ export const Footer2 = () => {
                             <Typography variant="paragraph" className="font-semibold w-3/4">
                                 Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.
                             </Typography>
-                            <div className="w-72">
+                            <div className="relative flex w-full max-w-[24rem]">
                                 <Input
                                     type="email"
-                                    placeholder="Email Address"
-                                    className="!border !border-gray-300 bg-white text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 placeholder:opacity-100 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
-                                    labelProps={{
-                                        className: "hidden",
+                                    label="Email Address"
+                                    value={emailNews}
+                                    onChange={onChange}
+                                    className="pr-20"
+                                    containerProps={{
+                                        className: "min-w-0",
                                     }}
-                                    containerProps={{ className: "min-w-[40px]" }}
                                 />
+                                <Button
+                                    size="sm"
+                                    color={emailNews ? "gray" : "blue-gray"}
+                                    disabled={!emailNews}
+                                    className="!absolute right-1 top-1 rounded"
+                                >
+                                    Invite
+                                </Button>
                             </div>
                         </AccordionBody>
                     </Accordion>
@@ -239,7 +413,7 @@ export const Footer2 = () => {
                             className=" font-extrabold flex items-center md:mb-5 text-xl md:text-[40px] text-white transition-colors uppercase hover:text-green-500 focus:text-green-500"
                         >
                             <img src={white_logo} alt="logo-ct" className="w-10 md:w-16" />
-                           
+
                         </Typography>
                         <div className="flex  items-center flex-wrap gap-4">
                             {/* Instagram */}
@@ -329,16 +503,26 @@ export const Footer2 = () => {
                     <Typography variant="paragraph" className="font-semibold w-3/4">
                         Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.
                     </Typography>
-                    <div className="w-72">
+                    <div className="relative flex w-full max-w-[24rem]">
                         <Input
                             type="email"
-                            placeholder="Email Address"
-                            className="!border !border-gray-300 bg-white text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 placeholder:opacity-100 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
-                            labelProps={{
-                                className: "hidden",
+                            color="white"
+                            label="Email Address"
+                            value={emailNews}
+                            onChange={onChange}
+                            className="pr-20"
+                            containerProps={{
+                                className: "min-w-0",
                             }}
-                            containerProps={{ className: "min-w-[100px]" }}
                         />
+                        <Button
+                            size="sm"
+                            color={emailNews ? "white" : "blue-gray"}
+                            disabled={!emailNews}
+                            className="!absolute right-1 top-1 rounded"
+                        >
+                            Subscribe
+                        </Button>
                     </div>
                 </div>
                 <div className="flex-col flex gap-4 justify-center">
@@ -401,7 +585,7 @@ export const Footer2 = () => {
             </div>
 
             <div className="flex justify-end">
-                <Button variant="gradient" className="text-black bg-white hover:bg-blue-gray-50 transition-all duration-300">Contact Us</Button>
+                <Button variant="gradient" onClick={handleOpenContact} className="text-black bg-white hover:bg-blue-gray-50 transition-all duration-300">Contact Us</Button>
             </div>
 
             {/* <!--Copyright section--> */}

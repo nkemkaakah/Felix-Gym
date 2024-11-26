@@ -4,6 +4,7 @@ import { Carousel, Typography, Button, IconButton } from "@material-tailwind/rea
 import banner1 from '../assets/IMG_2729.jpg'
 import banner2 from '../assets/IMG_2136.jpg'
 import banner3 from '../assets/shared7.jpg'
+import banner4 from '../assets/img4.png'
 
 
 
@@ -120,6 +121,11 @@ export const CarouselWithOverlay = () => {
         />
         <img
           src={banner3}
+          alt="image 3"
+          className="h-full w-full object-cover"
+        />
+        <img
+          src={banner4}
           alt="image 3"
           className="h-full w-full object-cover"
         />
