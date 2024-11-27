@@ -1,13 +1,12 @@
 /* eslint-disable no-unused-vars */
 import {
     Button,
-    Card,
     CardBody,
     CardFooter,
-    Typography,
+    Typography
 } from "@material-tailwind/react";
-import { Programs } from "../assets/contents";
 import { Link } from "react-router-dom";
+import { Programs } from "../assets/contents";
 
 
 
@@ -19,8 +18,8 @@ export function ProductListCard({
 }) {
     return (
         <Link to={`/training-programs/${id}`} state={{ id }} className="border-none border-gray-300 flex flex-col items-center">
-            <CardBody className="pb-0 ">
-                <img src={img} alt={img} className="aspect-220/241 w-[220px] overflow-hidden rounded-lg object-cover" />
+            <CardBody className="pb-0 flex flex-col justify-center items-center ">
+                <img src={img} alt={img} style={{ objectFit: 'cover', objectPosition: '50% 1%' }} className="aspect-220/241 w-[220px] overflow-hidden rounded-lg object-cover" />
                 <div className="flex justify-between">
                     <div>
                         <Typography className="mb-2 mr-3" color="blue-gray" variant="h5">
