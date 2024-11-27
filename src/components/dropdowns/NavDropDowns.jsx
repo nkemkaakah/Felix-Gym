@@ -30,7 +30,7 @@ export function AboutDropDown({ dark }) {
       }}
     >
       <MenuHandler>
-        <Button className={`text-lg ${!dark ? "text-black" : ""}  md:text-xl lg:text-[25px] xl:text-4xl xxl:text-[60px]   font-semibold  transition duration-300  border-none p-0 bg-transparent shadow-none`} > About</Button>
+        <Button className={`text-lg ${!dark ? "text-black" : ""}  md:text-xl lg:text-[25px] xl:text-4xl xxl:text-[60px] font-nunito   font-bold  transition duration-300  border-none p-0 bg-transparent shadow-none`} > About</Button>
       </MenuHandler>
       <MenuList className="flex flex-col gap-3">
         <Link to="/about">About Gutzfit</Link>
@@ -48,7 +48,7 @@ export function AboutMobileDropDown() {
       }}
     >
       <MenuHandler>
-        <Button className={`text-lg  md:text-xl lg:text-[25px] xl:text-4xl xxl:text-[60px]  font-semibold  transition duration-300  border-none p-0 bg-transparent shadow-none`} > About</Button>
+        <Button className={`text-lg  md:text-xl lg:text-[25px] xl:text-4xl xxl:text-[60px] font-nunito  font-bold  transition duration-300  border-none p-0 bg-transparent shadow-none`} > About</Button>
       </MenuHandler>
       <MenuList className="flex flex-col gap-3">
         <Link to="/about">About Gutzfit</Link>
@@ -67,7 +67,7 @@ export function TrainingDropDown({ dark }) {
       }}
     >
       <MenuHandler>
-        <Button className={`text-lg ${!dark ? "text-black" : ""} md:text-xl lg:text-[25px] xl:text-4xl xxl:text-[60px]  font-semibold  transition duration-300  border-none p-0 bg-transparent shadow-none`} > Training Programs</Button>
+        <Button className={`text-lg ${!dark ? "text-black" : ""} md:text-xl lg:text-[25px] font-nunito xl:text-4xl xxl:text-[60px]  font-bold  transition duration-300  border-none p-0 bg-transparent shadow-none`} > Training Programs</Button>
       </MenuHandler>
       <MenuList className="flex flex-col gap-3">
         <Link to="/training-programs/a9dB12fXcH7J3gT6L9Q4">Gutzfit Muscle Blast</Link>
@@ -89,7 +89,7 @@ export function TrainingMobileDropDown({ dark }) {
       }}
     >
       <MenuHandler>
-        <Button className={`text-lg md:text-xl lg:text-[25px] xl:text-4xl xxl:text-[60px]  font-semibold  transition duration-300  border-none p-0 bg-transparent shadow-none`} > Training Programs</Button>
+        <Button className={`text-lg md:text-xl lg:text-[25px] xl:text-4xl xxl:text-[60px] font-nunito  font-bold  transition duration-300  border-none p-0 bg-transparent shadow-none`} > Training Programs</Button>
       </MenuHandler>
       <MenuList className="flex flex-col gap-3">
         <Link to="/training-programs/a9dB12fXcH7J3gT6L9Q4" className="hover:!border-none">Gutzfit Muscle Blast</Link>
@@ -110,7 +110,7 @@ export function FollowMeDropDown({ dark }) {
       }}
     >
        <MenuHandler>
-        <Button className={`text-lg ${!dark ? "text-black" : ""} md:text-xl lg:text-[25px] xl:text-4xl xxl:text-[60px]  font-semibold  transition duration-300  border-none p-0 bg-transparent shadow-none`} > Follow Me</Button>
+        <Button className={`text-lg ${!dark ? "text-black" : ""} md:text-xl lg:text-[25px] font-nunito xl:text-4xl xxl:text-[60px]  font-bold  transition duration-300  border-none p-0 bg-transparent shadow-none`} > Follow Me</Button>
       </MenuHandler>
       <MenuList className="flex flex-col gap-3">
         <Link to="https://www.instagram.com/gutzfit?igsh=MWUzMGV0Z3lidnhkdA%3D%3D&utm_source=qr">Instagram</Link >
@@ -130,7 +130,7 @@ export function FollowMeMobileDropDown({ dark }) {
       }}
     >
       <MenuHandler>
-        <Button className={`text-lg md:text-xl lg:text-[25px] xl:text-4xl xxl:text-[60px]  font-semibold  transition duration-300  border-none p-0 bg-transparent shadow-none`} > Follow Me</Button>
+        <Button className={`text-lg md:text-xl lg:text-[25px] xl:text-4xl xxl:text-[60px]  font-nunito font-bold  transition duration-300  border-none p-0 bg-transparent shadow-none`} > Follow Me</Button>
       </MenuHandler>
       <MenuList className="flex flex-col gap-3">
         <Link to="https://www.instagram.com/gutzfit?igsh=MWUzMGV0Z3lidnhkdA%3D%3D&utm_source=qr">Instagram</Link >

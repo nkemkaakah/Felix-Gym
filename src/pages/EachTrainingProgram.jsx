@@ -25,6 +25,7 @@ import {
   DialogBody,
   DialogFooter,
 } from "@material-tailwind/react";
+import FadeInSection from '../components/FadeInSection';
 
 
 export function DialogDefault({ handleDialogOpen, dialogOpen }) {
@@ -73,55 +74,56 @@ const EachTrainingProgram = () => {
 
 
   return (
-    <section className="py-16 px-8">
-      <div className="mx-auto container grid place-items-center grid-cols-1 md:grid-cols-2">
-        <img
-          src={img}
-          alt="pink blazer"
-          className="h-[36rem] w-full rounded-sm object-cover md:w-auto md:object-top"
-        />
+    <FadeInSection>
+      <section className="py-16 px-8">
+        <div className="mx-auto container grid place-items-center grid-cols-1 md:grid-cols-2">
+          <img
+            src={img}
+            alt="pink blazer"
+            className="h-[36rem] w-full rounded-sm object-cover md:w-auto md:object-top"
+          />
 
-        <div className='md:ml-3'>
-          <Typography className="mb-4" variant="h3">
-            {name}
-          </Typography>
-          <div className="mb-4 flex w-full items-center gap-3 ">
-            <Button color="gray" className="hover:bg-gray-100 hover:text-black transition-all duration-300">
-              Add to Cart
-            </Button>
-            <Button color="green" className="hover:bg-green-500 hover:text-black transition-all  duration-300">
-              Buy Now
-            </Button>
+          <div className='md:ml-3'>
+            <Typography className="mb-4" variant="h3">
+              {name}
+            </Typography>
+            <div className="mb-4 flex w-full items-center gap-3 ">
+              <Button color="gray" className="hover:bg-gray-100 hover:text-black transition-all duration-300">
+                Add to Cart
+              </Button>
+              <Button color="green" className="hover:bg-green-500 hover:text-black transition-all  duration-300">
+                Buy Now
+              </Button>
 
-          </div>
-          <Typography variant="h5">{price}</Typography>
-          <Typography className="!mt-4 text-base font-normal text-justify leading-[27px] !text-gray-500">
-            {description}
-          </Typography>
-          <div className="my-8 flex items-center gap-2">
-            <Rating value={4} className="text-amber-500" />
-            <Typography className="!text-sm font-bold !text-gray-700">
-              4.0/5 (100 reviews)
+            </div>
+            <Typography variant="h5">{price}</Typography>
+            <Typography className="!mt-4 text-base font-normal text-justify leading-[27px] !text-gray-500">
+              {description}
             </Typography>
-          </div>
-          <div>
-            <Typography variant="h4">
-              Customer Reviews
-            </Typography>
-            <Accordion open={open === 1} animate={CUSTOM_ANIMATION}>
-              <AccordionHeader onClick={() => handleOpen(1)} className='font-bold'>Reviews</AccordionHeader>
-              <AccordionBody>
-                <Button
-                  variant="gradient"
-                  className="bg-black"
-                  onClick={handleDialogOpen}
-                >
-                  Write a review
-                </Button>
-              </AccordionBody>
-            </Accordion>
-          </div>
-          {/* <Typography color="blue-gray" variant="h6">
+            <div className="my-8 flex items-center gap-2">
+              <Rating value={4} className="text-amber-500" />
+              <Typography className="!text-sm font-bold !text-gray-700">
+                4.0/5 (100 reviews)
+              </Typography>
+            </div>
+            <div>
+              <Typography variant="h4">
+                Customer Reviews
+              </Typography>
+              <Accordion open={open === 1} animate={CUSTOM_ANIMATION}>
+                <AccordionHeader onClick={() => handleOpen(1)} className='font-bold'>Reviews</AccordionHeader>
+                <AccordionBody>
+                  <Button
+                    variant="gradient"
+                    className="bg-black"
+                    onClick={handleDialogOpen}
+                  >
+                    Write a review
+                  </Button>
+                </AccordionBody>
+              </Accordion>
+            </div>
+            {/* <Typography color="blue-gray" variant="h6">
             Color
           </Typography>
           <div className="my-8 mt-3 flex items-center gap-2">
@@ -130,10 +132,12 @@ const EachTrainingProgram = () => {
             <div className="h-5 w-5 rounded border border-blue-gray-100 bg-gray-900 "></div>
           </div> */}
 
+          </div>
         </div>
-      </div>
-      <DialogDefault handleDialogOpen={handleDialogOpen} dialogOpen={dialogOpen} />
-    </section>
+        <DialogDefault handleDialogOpen={handleDialogOpen} dialogOpen={dialogOpen} />
+      </section>
+    </FadeInSection>
+
   )
 }
 

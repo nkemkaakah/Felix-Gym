@@ -254,7 +254,7 @@ const Questionnaire = () => {
   };
 
   return (
-    <div className={`w-full h-full flex flex-col ${showCongrats ? 'items-start' : ''} items-ce justify-center`}>
+    <div className={`font-nunito w-full h-full flex flex-col ${showCongrats ? 'items-start' : ''} items-ce justify-center`}>
       {showCongrats ? (
         <div className="w-full flex flex-col items-start mt-20 text-justify animate-fadeIn transition-all duration-500 sm:w-[80%]">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-[50px] text-white uppercase font-bold mb-4 flex xs:flex-row flex-col items-center gap-2 mr-3">
@@ -314,15 +314,15 @@ const Questionnaire = () => {
 
             ) : (
               <>
-                <h2 style={{ fontFamily: "'ITC Avant Garde Gothic', sans-serif" }} className="md:text-xl text-lg lg:text-center lg:text-3xl text-white font-bold mb-6">{questions[currentStep].question}</h2>
+                <h2 className="md:text-xl font-nunito text-lg lg:text-center lg:text-3xl text-white font-bold mb-6">{questions[currentStep].question}</h2>
                 {!isTextareaQuestion ? (
                   <div className="flex flex-col gap-4 text-white">
                     {questions[currentStep].options?.map((option, index) => (
                       <button
-                        style={{ fontFamily: "'ITC Avant Garde Gothic', sans-serif" }}
+                        
                         key={index}
                         onClick={() => handleOptionClick(option)}
-                        className={`sm:px-8 sm:py-4 px-6 py-3  text-lg md:text-xl lg:text-2xl font-semibold rounded-md border border-white  ${selectedOption === option ? 'bg-black' : 'bg-transparent'} hover:bg-black transition-all duration-300`}
+                        className={`sm:px-8 sm:py-4 px-6 py-3 font-nunito text-lg md:text-xl lg:text-2xl font-semibold rounded-md border border-white  ${selectedOption === option ? 'bg-black' : 'bg-transparent'} hover:bg-black transition-all duration-300`}
                       >
                         {option.label}
                       </button>

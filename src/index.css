@@ -30,6 +30,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  @apply font-nunito
 }
 
 @keyframes slide {
@@ -52,7 +53,7 @@ body {
 
 @layer base {
   body {
-    @apply font-secondary text-neutral-400 bg-[#ffffff];
+    @apply font-nunito text-neutral-400 bg-[#ffffff];
   }
 
   h1,

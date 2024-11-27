@@ -85,6 +85,9 @@ export default withMT({
           'Noto Color Emoji',
         ],
         sans: ['Poppins', 'sans-serif'],
+        nunito: ['Nunito', 'sans-serif'],
+        outfit: ['Outfit', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       gap: {
         '18': '4.5rem',

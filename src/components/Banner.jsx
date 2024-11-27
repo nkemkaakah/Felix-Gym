@@ -142,15 +142,15 @@ export const CarouselWithOverlay = () => {
             data-aos="fade-down"
             data-aos-delay="500"
           >
-            <Typography variant="h1" className='uppercase !text-white text-shadow text-center font-bold '>Gutzfit Training Programs</Typography>
+            <Typography variant="h2" className='uppercase !text-white text-shadow text-center font-bold font-nunito '>Gutzfit Training Programs</Typography>
             {/* <span className="uppercase text-white text-shadow">Gutzfit Training Programs</span> */}
           </h1>
-          <p
-            className="text-white text-center text-md md:text-lg font-semibold hidden xs:block my-3"
-            style={{ fontFamily: "'ITC Avant Garde Gothic', sans-serif" }}
+          <Typography variant='h4'
+            className="text-white text-center  font-semibold hidden font-nunito xs:block my-3"
+            // style={{ fontFamily: "'ITC Avant Garde Gothic', sans-serif" }}
           >
             Use our questionnaire below to get the best training programs for you designed specially by Gutzfit
-          </p>
+          </Typography>
           {/* <p className='max-w-[415px] text-body-md lg:text-body-lg mb-8 ml-8' data-aos='fade-down' data-aos-delay='600'>
               We provide serious fitness but within a fun and friendly, safe space
           </p> */}
