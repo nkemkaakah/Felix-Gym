@@ -47,7 +47,7 @@ const Banner = () => {
 export const CarouselWithOverlay = () => {
   return (
     <div className="relative h-[1000px]">
-      <Carousel loop={true}  autoplay={true} className="rounded-xl"
+      <Carousel loop={true} autoplay={true} className="rounded-xl"
         navigation={({ setActiveIndex, activeIndex, length }) => (
           <div className="absolute bottom-4 left-2/4 z-0 flex -translate-x-2/4 gap-2">
             {new Array(length).fill("").map((_, i) => (
@@ -112,22 +112,26 @@ export const CarouselWithOverlay = () => {
         <img
           src={banner1}
           alt="image 1"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover "
+          style={{ objectFit: 'cover', objectPosition: '50% 20%' }}
         />
         <img
           src={banner2}
           alt="image 2"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover "
+          style={{ objectFit: 'cover', objectPosition: '50% 10%' }}
         />
         <img
           src={banner3}
           alt="image 3"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover "
+          style={{ objectFit: 'cover', objectPosition: '50% 20%' }}
         />
         <img
           src={banner4}
           alt="image 3"
           className="h-full w-full object-cover"
+          style={{ objectFit: 'cover', objectPosition: '50% 15%' }}
         />
       </Carousel>
       <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-white max-w-[100%] sm:max-w-[60%] xl:w-[70%] mt-10 sm:mt-30 md:mt-40 z-10 pl-4 pr-4 lg:pr-0 md:pb-20 lg:pl-3 text-left">
@@ -150,7 +154,7 @@ export const CarouselWithOverlay = () => {
           {/* <p className='max-w-[415px] text-body-md lg:text-body-lg mb-8 ml-8' data-aos='fade-down' data-aos-delay='600'>
               We provide serious fitness but within a fun and friendly, safe space
           </p> */}
-          <Questionnaire />
+          <Questionnaire className="transform scale-50" />
         </div>
       </div>
     </div>
