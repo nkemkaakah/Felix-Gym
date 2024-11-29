@@ -44,11 +44,11 @@ const NotHomeNav = () => {
                     {/* <h1 className='text-white text-4xl'>Felix Gym</h1> */}
                 </a>
 
-                <div>
+                {/* <div>
                     <Typography variant='h5' className='flex-wrap text-black mb-2 hover:scale-105 transition-all duration-300'>
                         No Gutz No Glory
                     </Typography>
-                </div>
+                </div> */}
             </div>
             <nav className='hidden lg:flex '>
                 <ul className='flex  text-black xl:gap-x-28 gap-x-10  '>
@@ -62,6 +62,8 @@ const NotHomeNav = () => {
                 <button className={`btn ${isHomeRoute ? 'btn-sm text-white hover:bg-gray-600' : 'btn-lg hover:text-gray-400'} rounded-sm  transition-all duration-200 font-nunito`}>Login</button>
                 <button className={`btn btn-sm  btn-primary btn-secondary bg-black text-white rounded-md hover:bg-black/70 transition-all duration-300 font-nunito`} onClick={handleOpen}>SignUp</button>
             </div>
+
+
             <SignUpModal open={open} handleOpen={handleOpen} />
             <div onClick={() => setNavMobile(!navmobile)} className='lg:hidden absolute right-4 top-6'>
                 {navmobile ? (<RiCloseFill className='text-primary-200 text-3xl cursor-pointer' />) :
