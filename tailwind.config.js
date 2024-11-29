@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import withMT from "@material-tailwind/react/utils/withMT";
+import { px } from "framer-motion";
 
 export default withMT({
   content: [
@@ -18,6 +19,7 @@ export default withMT({
       },
     },
     screens: {
+      xxs:'300px',
       xs:'400px',
       s:'550px',
       sm: '640px',
