@@ -138,18 +138,18 @@ const Home = () => {
       {/* FAQs */}
       {/* <Faqs4 /> */}
 
-      <section className="relative w-full h-screen overflow-hidden">
-        <div className="w-full h-full aspect-[16/9]">
-          <video
-            className="absolute top-0 left-0 w-full h-full object-cover"
-            autoPlay
-            loop
-            muted
-            playsInline
-            src={videoBg}
-            type="video/mp4"
-          />
-        </div>
+      <section className="w-full  mx-auto aspect-[16/9] relative group">
+
+        <video
+          className="w-full h-full object-contain"
+          autoPlay
+          loop
+          muted
+          playsInline
+          src={videoBg}
+          type="video/mp4"
+        />
+
       </section>
       {/**get started */}
       {/* <GetStarted /> */}

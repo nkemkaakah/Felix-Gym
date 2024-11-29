@@ -369,7 +369,7 @@ export const Footer2 = () => {
                         </AccordionBody>
                     </Accordion>
                     <Accordion open={open === 4} icon={<Icon id={4} open={open} />} className="text-white">
-                        <AccordionHeader onClick={() => handleOpen(4)} className="text-white">
+                        <AccordionHeader onClick={() => handleOpen(4)} className="text-white hover:text-white">
                             Sign Up for Newsletter
                         </AccordionHeader>
                         <AccordionBody className="text-white font-semibold flex flex-col gap-5">

@@ -3,7 +3,7 @@ import Questionnaire from './Questionnaire'
 import { Carousel, Typography, Button, IconButton } from "@material-tailwind/react";
 import banner1 from '../assets/IMG_2729.jpg'
 import banner2 from '../assets/IMG_2136.jpg'
-import banner3 from '../assets/shared7.jpg'
+import banner3 from '../assets/Mens Classic - Overall_102810_Original.jpg'
 import banner4 from '../assets/img4.png'
 
 
@@ -46,7 +46,7 @@ const Banner = () => {
 
 export const CarouselWithOverlay = () => {
   return (
-    <div className="relative h-[1000px]">
+    <div className="relative h-[1000px] " id='questionnaire-section'>
       <Carousel loop={true} autoplay={true} className="rounded-xl"
         navigation={({ setActiveIndex, activeIndex, length }) => (
           <div className="absolute bottom-4 left-2/4 z-0 flex -translate-x-2/4 gap-2">

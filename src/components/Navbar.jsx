@@ -70,7 +70,7 @@ const Navbar = () => {
                 <div onClick={() => setNavMobile(!navmobile)} className='lg:hidden absolute right-4 top-6'>
                     {navmobile ? (<RiCloseFill className='text-primary-200 text-3xl cursor-pointer' />) :
                         (
-                            <RiMenu4Fill className={`${isActive ? 'text-white' : "text-black"} text-3xl border s:border-none cursor-pointer  rounded`} />
+                            <RiMenu4Fill className={`${isActive ? 'text-white' : "text-white"} text-3xl border s:border-none cursor-pointer  rounded`} />
                         )
                     }
                 </div>
