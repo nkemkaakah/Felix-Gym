@@ -11,7 +11,7 @@ const About = () => {
         About Gutzfit
       </Typography>
       <img
-        className="max-h-96 w-full rounded-lg  shadow-sm shadow-blue-gray-900/50 mt-5"
+        className="h-96  lg:h-[450px] w-full rounded-lg  shadow-sm shadow-blue-gray-900/50 mt-5"
         src={about_img}
         alt="nature image"
         style={{ objectFit: 'cover', objectPosition: '50% 15%' }}
@@ -25,7 +25,7 @@ const About = () => {
 
       </Typography>
       <img
-        className="max-h-96 w-full rounded-lg  shadow-sm shadow-blue-gray-900/50 mt-5"
+        className="h-96 lg:h-[450px] w-full rounded-lg  shadow-sm shadow-blue-gray-900/50 mt-5"
         src={about2_img}
         alt="nature image"
         style={{ objectFit: 'cover', objectPosition: '50% 1%' }}
@@ -43,7 +43,7 @@ const About = () => {
 
       </Typography>
       <img
-        className="max-h-96 w-full rounded-lg  shadow-sm shadow-blue-gray-900/50 mt-5"
+        className="h-[500px] lg:h-[750px] w-full rounded-lg  shadow-sm shadow-blue-gray-900/50 mt-5"
         src={about3_img}
         alt="nature image"
         style={{ objectFit: 'cover', objectPosition: '50% 1%' }}

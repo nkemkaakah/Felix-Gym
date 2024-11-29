@@ -17,6 +17,7 @@ import {
 import React, { useEffect, useState } from 'react';
 import { FaCheckCircle } from "react-icons/fa";
 import { Programs } from "../assets/contents";
+import { Link } from "react-router-dom";
 
 const questions = [
   {
@@ -353,10 +354,10 @@ const Questionnaire = () => {
              
               className="flex flex-col items-center justify-center text-center" // Center the content inside the dialog
             >
-              <DialogHeader className="font-bold text-[30px] md:text-[40px]">
+              <DialogHeader className="font-bold text-[20px] sm:text-[30px] md:text-[40px]">
                 Thank You for Your Response!
               </DialogHeader>
-              <DialogBody className="font-semibold">
+              <DialogBody className="font-semibold text-justify">
                 Based on your answers, we’ve selected the perfect workout plans for
                 you! Click below to get started on your personalized fitness journey.
                 Our team will reach out to you shortly to assist with your fitness journey.
@@ -365,14 +366,15 @@ const Questionnaire = () => {
                 or call us at
                 <a href="tel:+1234567890" className="text-green-500"> +1234567890</a>. */}
               </DialogBody>
-              <DialogBody className="font-semibold">
-                <Typography color="black" className="font-semibold text-lg">
+              <DialogBody className="font-semibold ">
+                <Typography color="black" variant="small" className="font-semibold ">
                   Recommended Plans based for you:
                 </Typography>
-                <Card className="w-96">
-                  <List>
+                <Card className="w-96 scale-75 s:scale-100">
+                  <List >
                     {selectedPrograms.map((program) => (
-                      <ListItem key={program.id}>
+                      <ListItem key={program.id} className="cursor-pointer">
+                      <Link to={program.link} className="flex items-center gap-4 no-underline text-inherit">
                         <ListItemPrefix>
                           <Avatar
                             variant="circular"
@@ -388,7 +390,9 @@ const Questionnaire = () => {
                             Price: {program.price}
                           </Typography>
                         </div>
-                      </ListItem>
+                      </Link>
+                    </ListItem>
+                  
                     ))}
                   </List>
                 </Card>

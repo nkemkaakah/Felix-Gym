@@ -136,24 +136,22 @@ export const CarouselWithOverlay = () => {
       </Carousel>
       <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-white max-w-[100%] sm:max-w-[60%] xl:w-[70%] mt-10 sm:mt-30 md:mt-40 z-10 pl-4 pr-4 lg:pr-0 md:pb-20 lg:pl-3 text-left">
         <div className="text-left">
-          <h1
-            className="md:text-[70px] text-3xl xl:text-center font-bold text-white mb-8 text-shadow"
-            style={{ fontFamily: "'ITC Avant Garde Gothic', sans-serif" }}
+          {/* <h1
+            className="md:text-[70px] font-nunito text-3xl xl:text-center font-bold text-white mb-8 text-shadow"
+            
             data-aos="fade-down"
             data-aos-delay="500"
           >
             <Typography variant="h2" className='uppercase !text-white text-shadow text-center font-bold font-nunito '>Gutzfit Training Programs</Typography>
-            {/* <span className="uppercase text-white text-shadow">Gutzfit Training Programs</span> */}
+            
           </h1>
           <Typography variant='h4'
             className="text-white text-center  font-semibold hidden font-nunito xs:block my-3"
-            // style={{ fontFamily: "'ITC Avant Garde Gothic', sans-serif" }}
+            
           >
             Use our questionnaire below to get the best training programs for you designed specially by Gutzfit
-          </Typography>
-          {/* <p className='max-w-[415px] text-body-md lg:text-body-lg mb-8 ml-8' data-aos='fade-down' data-aos-delay='600'>
-              We provide serious fitness but within a fun and friendly, safe space
-          </p> */}
+          </Typography> */}
+          
           <Questionnaire className="transform scale-50" />
         </div>
       </div>

@@ -36,7 +36,7 @@ const NotHomeNav = () => {
 
     return (
         <header className={`border-b-2 flex flex-col`}>
-            <div className='z-30 left-0 right-0 lg:mx-auto top-0 flex justify-between items-center px-[10px] lg:px-[40px] transition-all duration-300'>
+            <div className='z-30 left-0 right-0  top-0 flex justify-between items-center px-[10px] lg:px-[40px] transition-all duration-300'>
                 <div className='flex flex-col items-center justify-center gap-0'>
 
                     <a href="/" className='flex items-center flex-col gap-0 '>
@@ -86,7 +86,7 @@ const NotHomeNav = () => {
 
             <div>
                 <div>
-                    <Typography variant='h5' className='flex-wrap text-black mb-2 ml-3 hover:scale-105 transition-all duration-300'>
+                    <Typography variant='h5' className='flex-wrap text-black mb-2 ml-3  transition-all duration-300'>
                         No Gutz No Glory
                     </Typography>
                 </div>
