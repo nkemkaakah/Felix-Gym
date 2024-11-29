@@ -78,12 +78,12 @@ export function ProductListSection4() {
     return (
         <section className="py-10 px-8 border-t-[1px]" id='training-programs'>
             <div className="mx-auto text-center mb-16">
-                <Typography className="font-bold text-4xl sm:text-5xl md:text-[70px]">
+                <Typography className="font-bold text-4xl sm:text-5xl md:text-[70px] mb-5">
                     Training Programs
                 </Typography>
-                <Typography variant="h1" className="my-4 text-4xl">
+                {/* <Typography variant="h1" className="my-4 text-4xl">
                     Unlock Your Fitness Goals
-                </Typography>
+                </Typography> */}
                 <Typography className="!font-semibold text-gray-900 mx-auto max-w-2xl">
                     Explore our diverse range of gym workout training programs tailored to your fitness needs.
                     From strength training to cardio, find the perfect program to help you achieve your goals.

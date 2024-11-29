@@ -80,7 +80,7 @@ const EachTrainingProgram = () => {
           <img
             src={img}
             alt="pink blazer"
-            className="h-[36rem] w-full rounded-sm object-cover md:w-auto md:object-top"
+            className="h-[36rem] w-full rounded-sm object-cover md:w-auto object-top"
           />
 
           <div className='md:ml-3'>

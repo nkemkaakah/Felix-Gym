@@ -379,6 +379,7 @@ export const Footer2 = () => {
                             <div className="relative flex w-full max-w-[24rem]">
                                 <Input
                                     type="email"
+                                    color="white"
                                     label="Email Address"
                                     value={emailNews}
                                     onChange={onChange}
@@ -389,11 +390,11 @@ export const Footer2 = () => {
                                 />
                                 <Button
                                     size="sm"
-                                    color={emailNews ? "gray" : "blue-gray"}
+                                    color={emailNews ? "white" : "blue-gray"}
                                     disabled={!emailNews}
                                     className="!absolute right-1 top-1 rounded"
                                 >
-                                    Invite
+                                    Subscribe
                                 </Button>
                             </div>
                         </AccordionBody>

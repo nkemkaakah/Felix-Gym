@@ -11,7 +11,7 @@ const TrainingPrograms = () => {
     <div className=' p-20 py-3 px-2 sm:px-10 mb-40 pt-20'>
       <FadeInSection>
         <Typography variant="h1">Training Programs</Typography>
-        <Typography className='font-semibold mt-3 w-full'>
+        <Typography className='font-semibold mt-3 w-full md:w-[80%]'>
           Explore our diverse range of training programs tailored to your fitness needs.
           From strength training to cardio, find the perfect program to help you achieve
           your goals.

@@ -144,18 +144,3 @@ body {
   font-family: "Syne", Sans-serif;
   line-height: 0.9em;
 }
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
