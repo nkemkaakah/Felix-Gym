@@ -1,10 +1,17 @@
 import { Typography } from '@material-tailwind/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import about_img from '../assets/IMG_0144.jpg'
 import about2_img from '../assets/IMG_1064.JPG'
 import about3_img from '../assets/IMG_2281 copy.jpg'
 
 const About = () => {
+
+  useEffect(() => {
+    // Scroll to the top of the page when the component is mounted
+    window.scrollTo(0, 0);
+  }, []);
+
+
   return (
     <div className="xxs:px-2 xs:px-4 s:px-20 sm:px-28 md:px-36 lg:px-48 py-20">
       <Typography variant='h1' className='text-black font-nunito font-extrabold '>
