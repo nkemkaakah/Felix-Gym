@@ -6,7 +6,7 @@ import {
 } from "@material-tailwind/react";
 import banner1 from '../assets/IMG_0559.JPG'
 
-import videoBg from '../assets/Copy of GUTZFIT YOUTUBE .mp4';
+import videoBg from '../assets/Copy of 1017.mp4';
 import { CarouselWithOverlay } from '../components/Banner';
 import TestimonialSection16 from '../components/Community';
 import Faqs4 from '../components/Faqs';

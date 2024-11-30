@@ -36,9 +36,9 @@ const Navbar = () => {
 
     return (
         <div>
-            <header className={`${isActive ? 'bg-black py-[2px]' : 'bg-transparent py-[3px]'} ${!isHomeRoute ? "border-b-2" : ""} fixed w-full z-30 left-0 right-0 mx-auto top-0 flex justify-between items-center px-[10px] lg:px-[40px] transition-all duration-300`}>
-                <div>
-                    <a href="/" className='flex items-center flex-col gap-0 '>
+            <header className={`${isActive ? 'bg-black py-[2px]' : 'bg-transparent py-[3px]'} ${!isHomeRoute ? "border-b-2" : ""} fixed w-full z-30 left-0 right-0 md:mx-auto top-0 flex justify-between items-center px-[10px] lg:px-[40px] transition-all duration-300`}>
+                <div className="flex flex-col justify-start">
+                    <a href="/" className=''>
                         {isHomeRoute || isActive ?
                             (<img src={white_logo} alt="" className=" h-[150px] hover:scale-105 transition-all duration-300" />) :
                             (<img src={black_logo} alt="" className=" h-[150px] hover:scale-105 transition-all duration-300" />)
@@ -79,8 +79,6 @@ const Navbar = () => {
                         <li onClick={() => setNavMobile(false)}><AboutMobileDropDown isActive={isActive} dark={isHomeRoute} /></li>
                         <li onClick={() => setNavMobile(false)}><TrainingMobileDropDown dark={isHomeRoute} /></li>
                         <li onClick={() => setNavMobile(false)}><FollowMeMobileDropDown dark={isHomeRoute} /></li>
-
-
                     </ul>
 
                     <div className='-mt-44 flex justify-center gap-x-8'>

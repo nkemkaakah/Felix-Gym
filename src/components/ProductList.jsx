@@ -85,8 +85,8 @@ export function ProductListSection4() {
                     Unlock Your Fitness Goals
                 </Typography> */}
                 <Typography className="!font-semibold text-gray-900 mx-auto max-w-2xl">
-                    Explore our diverse range of gym workout training programs tailored to your fitness needs.
-                    From strength training to cardio, find the perfect program to help you achieve your goals.
+                Explore our diverse range of training programs tailored to your fitness needs.
+                From strength training to cardio, find the perfect program to help you achieve your goals.
                 </Typography>
             </div>
             <div className="mx-auto container">
