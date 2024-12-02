@@ -8,13 +8,13 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import {
-  
+
   Dialog,
   Card,
   CardHeader,
   CardBody,
   CardFooter,
-  
+
   Input,
   Checkbox,
 } from "@material-tailwind/react";
@@ -71,10 +71,10 @@ export function TrainingDropDown({ dark }) {
       </MenuHandler>
       <MenuList className="flex flex-col gap-3">
         <Link to="/training-programs/a9dB12fXcH7J3gT6L9Q4">Gutzfit Muscle Blast</Link>
-        <Link to="/training-programs/z4Xy8VwN2Pq7H1R5m6K9">Gutzfit Tone Up</Link>
+        <Link to="/training-programs/z4Xy8VwN2Pq7H1R5m6K9">Gutzfit Outdoor Beast</Link>
         <Link to="/training-programs/t6Yk3Pz2bF5D8Jw1V4H7">Gutzfit METCON</Link>
         <Link to="/training-programs/m9R1Xv5L4Kc2Y7N8W3J0">Gutzfit Shred</Link>
-        <Link to="/training-programs/u7B3L2Qw5T9F6H1X4P8K">Gutzfit Outdoor Beast</Link>
+        <Link to="/training-programs/u7B3L2Qw5T9F6H1X4P8K">Gutzfit Tone Up</Link>
 
       </MenuList>
     </Menu>
@@ -92,11 +92,11 @@ export function TrainingMobileDropDown({ dark }) {
         <Button className={`text-lg md:text-xl lg:text-[25px] xl:text-4xl xxl:text-[60px] font-nunito  font-bold  transition duration-300  border-none p-0 bg-transparent shadow-none`} > Training Programs</Button>
       </MenuHandler>
       <MenuList className="flex flex-col gap-3">
-        <Link to="/training-programs/a9dB12fXcH7J3gT6L9Q4" className="hover:!border-none">Gutzfit Muscle Blast</Link>
-        <Link to="/training-programs/z4Xy8VwN2Pq7H1R5m6K9">Gutzfit Tone Up</Link>
+        <Link to="/training-programs/a9dB12fXcH7J3gT6L9Q4">Gutzfit Muscle Blast</Link>
+        <Link to="/training-programs/z4Xy8VwN2Pq7H1R5m6K9">Gutzfit Outdoor Beast</Link>
         <Link to="/training-programs/t6Yk3Pz2bF5D8Jw1V4H7">Gutzfit METCON</Link>
         <Link to="/training-programs/m9R1Xv5L4Kc2Y7N8W3J0">Gutzfit Shred</Link>
-        <Link to="/training-programs/u7B3L2Qw5T9F6H1X4P8K">Gutzfit Outdoor Beast</Link>
+        <Link to="/training-programs/u7B3L2Qw5T9F6H1X4P8K">Gutzfit Tone Up</Link>
       </MenuList>
     </Menu>
   );
@@ -109,7 +109,7 @@ export function FollowMeDropDown({ dark }) {
         unmount: { y: 25 },
       }}
     >
-       <MenuHandler>
+      <MenuHandler>
         <Button className={`text-lg ${!dark ? "text-black" : ""} md:text-xl lg:text-[25px] font-nunito xl:text-4xl xxl:text-[60px]  font-bold  transition duration-300  border-none p-0 bg-transparent shadow-none`} > Follow Me</Button>
       </MenuHandler>
       <MenuList className="flex flex-col gap-3">
@@ -144,10 +144,10 @@ export function FollowMeMobileDropDown({ dark }) {
 
 //popups modal
 export function SignUpModal({ open, handleOpen }) {
- 
+
   return (
     <>
-      
+
       <Dialog
         size="xs"
         open={open}
